@@ -230,7 +230,7 @@ export default function ServicesPage() {
 
       <BrandLogos />
 
-      <section className="py-16 md:py-24">
+      <section id="faq" className="scroll-mt-28 py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className="eyebrow">Pertanyaan umum</p>

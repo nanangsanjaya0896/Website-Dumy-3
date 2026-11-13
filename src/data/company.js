@@ -26,6 +26,11 @@ export const company = {
   address: "Jakarta, Indonesia",
   serviceArea: "Jabodetabek dan sekitarnya",
   businessHours: "Senin–Sabtu, 08.00–20.00 WIB",
+  /** Rincian jam kerja untuk footer (dibaca baris per baris). */
+  hours: [
+    { day: "Senin–Sabtu", time: "08.00–20.00 WIB" },
+    { day: "Minggu & libur", time: "Darurat 24/7" },
+  ],
   emergencyService: "Tersedia 24/7 untuk pelanggan kontrak",
   foundedYear: 2015,
   status: "Menerima booking pemasangan & servis AC",

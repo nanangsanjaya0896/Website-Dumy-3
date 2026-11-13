@@ -1,5 +1,13 @@
 import { Link } from "react-router";
-import { MapPin, Mail, Snowflake } from "lucide-react";
+import {
+  ArrowUpRight,
+  Clock3,
+  Mail,
+  MapPin,
+  Phone,
+  Snowflake,
+} from "lucide-react";
+import { QRCodeSVG } from "qrcode.react";
 import { company } from "../data/company";
 import { socials } from "../data/socials";
 import { WhatsAppIcon } from "./WhatsAppFloat";
@@ -32,171 +40,262 @@ export function TikTokIcon({ size = 18 }) {
   );
 }
 
-const socialIcon = (icon) => {
+const socialIcon = (icon, size = 16) => {
   switch (icon) {
     case "instagram":
-      return <InstagramIcon size={18} />;
+      return <InstagramIcon size={size} />;
     case "whatsapp":
-      return <WhatsAppIcon size={18} />;
+      return <WhatsAppIcon size={size} />;
     case "maps":
-      return <MapPin size={18} />;
+      return <MapPin size={size} />;
     case "tiktok":
-      return <TikTokIcon size={18} />;
+      return <TikTokIcon size={size} />;
     default:
       return null;
   }
 };
 
-const menuLinks = [
-  { to: "/", label: "Beranda" },
-  { to: "/about", label: "Tentang" },
-  { to: "/services", label: "Layanan" },
-  { to: "/projects", label: "Proyek" },
-  { to: "/contact", label: "Kontak" },
+/* ── Tautan footer ─────────────────────────────────────────────── */
+const serviceLinks = [
+  { to: "/services", label: "Pasang AC Baru" },
+  { to: "/services", label: "Servis & Perawatan" },
+  { to: "/services", label: "Perbaikan & Troubleshooting" },
+  { to: "/services", label: "Isi Ulang Freon" },
+  { to: "/services", label: "Bongkar & Pindah Unit" },
+  { to: "/services", label: "Kontrak Perawatan Berkala" },
 ];
 
-const serviceLinks = [
-  { to: "/services", label: "Pasang AC" },
-  { to: "/services", label: "Servis Rutin" },
-  { to: "/services", label: "Isi Freon" },
-  { to: "/services", label: "Bongkar Pasang" },
+const infoLinks = [
+  { to: "/about", label: "Tentang Kami" },
+  { to: "/projects", label: "Portofolio Proyek" },
+  { to: "/services#harga", label: "Harga & Paket" },
+  { to: "/contact", label: "Cara Booking" },
+  { to: "/about", label: "Garansi & SOP Kerja" },
+  { to: "/services#faq", label: "Pertanyaan Umum" },
 ];
+
+const legalLinks = [
+  { to: "/privacy", label: "Kebijakan Privasi" },
+  { to: "/terms", label: "Syarat Layanan" },
+];
+
+const footerLinkClass =
+  "text-[13.5px] font-medium text-white/60 transition-colors hover:text-white";
+
+function FooterLink({ to, label }) {
+  return (
+    <Link to={to} className={`focus-ring ${footerLinkClass} rounded`}>
+      {label}
+    </Link>
+  );
+}
+
+function SocialButton({ social }) {
+  return (
+    <a
+      href={social.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={social.label}
+      className="focus-ring grid h-10 w-10 place-items-center rounded-full border border-white/10 text-white/60 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-accent-2/50 hover:bg-white/5 hover:text-white"
+    >
+      {socialIcon(social.icon)}
+    </a>
+  );
+}
+
+/* QR asli yang mengarah ke WhatsApp, pesan sudah terisi otomatis */
+function WhatsAppQr() {
+  return (
+    <div className="inline-flex items-center gap-4 rounded-2xl border border-white/10 p-3">
+      <div className="rounded-lg bg-white p-2" aria-hidden="true">
+        <QRCodeSVG
+          value={company.whatsappLink}
+          size={64}
+          level="M"
+          bgColor="#ffffff"
+          fgColor="#0a1628"
+        />
+      </div>
+      <div>
+        <p className="text-[11px] font-extrabold tracking-[0.18em] text-white/80 uppercase">
+          Scan &amp; Chat
+        </p>
+        <p className="mt-1 text-[11px] text-white/40">Arahkan kamera ke kode</p>
+      </div>
+    </div>
+  );
+}
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
-    <footer className="bg-brand-navy text-white">
-      <div className="mx-auto max-w-7xl px-4 pt-20 pb-10 sm:px-6 md:px-8 md:pt-24 lg:px-16 xl:px-24">
-        <div className="grid gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-5">
-            <div className="flex items-center gap-2.5">
+    <footer
+      id="kontak"
+      className="relative overflow-hidden bg-brand-navy text-white/60"
+    >
+      <div className="relative z-[2] mx-auto max-w-7xl px-4 pt-20 pb-10 sm:px-6 md:px-8 md:pt-28 lg:px-16 xl:px-24">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_0.8fr_1.1fr] lg:gap-10">
+          {/* Brand */}
+          <div>
+            <Link
+              to="/"
+              className="focus-ring inline-flex items-center gap-2.5 rounded-lg"
+              aria-label="Sejukin — kembali ke beranda"
+            >
               <Snowflake
-                className="h-7 w-7 text-brand-accent-2"
+                className="h-8 w-8 text-brand-accent-2"
                 strokeWidth={2}
                 fill="rgba(56, 189, 248, 0.2)"
               />
-              <span className="font-display text-xl font-bold tracking-wide">
+              <span className="font-display text-xl font-bold tracking-wide text-white">
                 SEJUKIN
               </span>
-            </div>
-            <h2 className="mt-6 max-w-md display-section-sm text-white">
-              Udara sejuk, ruangan nyaman — mulai dari{" "}
-              <span className="text-gradient-bright">Sejukin</span>.
-            </h2>
-            <div className="mt-6 inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-xs font-medium text-white/80">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-accent-2 opacity-60" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-accent-2" />
+            </Link>
+
+            <p className="mt-6 text-[13.5px] leading-relaxed text-white/55">
+              {company.tagline}
+              <br />
+              <span className="text-white/40">
+                Pasang, servis, dan perbaikan AC — bergaransi tertulis.
               </span>
-              {company.status}
-            </div>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href={company.whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="focus-ring inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-brand-primary transition-colors hover:bg-brand-bg"
-              >
-                <WhatsAppIcon size={18} />
-                WhatsApp Kami
-              </a>
-              <a
-                href={`mailto:${company.email}`}
-                className="focus-ring inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-white/60 hover:bg-white/10"
-              >
-                <Mail size={16} />
-                {company.email}
-              </a>
+            </p>
+
+            <p className="mt-5 flex items-start gap-2 text-[12.5px] font-semibold text-white/45">
+              <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-accent-2" />
+              {company.serviceArea}
+            </p>
+
+            <div className="mt-7 flex items-center gap-2.5">
+              {socials.map((social) => (
+                <SocialButton key={social.label} social={social} />
+              ))}
             </div>
           </div>
 
-          <div className="lg:col-span-3">
-            <h3 className="text-sm font-semibold tracking-widest text-white/50 uppercase">
-              Menu
-            </h3>
-            <ul className="mt-5 space-y-3">
-              {menuLinks.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    to={link.to}
-                    className="focus-ring text-sm text-white/75 transition-colors hover:text-white"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <h3 className="mt-8 text-sm font-semibold tracking-widest text-white/50 uppercase">
-              Layanan populer
-            </h3>
-            <ul className="mt-5 space-y-3">
+          {/* Layanan */}
+          <nav aria-label="Layanan">
+            <h2 className="text-[11px] font-extrabold tracking-[0.28em] text-white/35 uppercase">
+              Layanan
+            </h2>
+            <ul className="mt-6 space-y-3.5">
               {serviceLinks.map((link) => (
                 <li key={link.label}>
-                  <Link
-                    to={link.to}
-                    className="focus-ring text-sm text-white/75 transition-colors hover:text-white"
-                  >
-                    {link.label}
-                  </Link>
+                  <FooterLink {...link} />
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
-          <div className="lg:col-span-4">
-            <h3 className="text-sm font-semibold tracking-widest text-white/50 uppercase">
-              Terhubung dengan kami
-            </h3>
-            <div className="mt-5 flex gap-3">
-              {socials.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.label}
-                  className="focus-ring grid h-11 w-11 place-items-center rounded-full border border-white/15 bg-white/10 text-white/80 transition-all hover:scale-105 hover:border-white/40 hover:bg-white/20 hover:text-white"
-                >
-                  {socialIcon(social.icon)}
-                </a>
+          {/* Informasi */}
+          <nav aria-label="Informasi">
+            <h2 className="text-[11px] font-extrabold tracking-[0.28em] text-white/35 uppercase">
+              Informasi
+            </h2>
+            <ul className="mt-6 space-y-3.5">
+              {infoLinks.map((link) => (
+                <li key={link.label}>
+                  <FooterLink {...link} />
+                </li>
               ))}
+            </ul>
+          </nav>
+
+          {/* Kontak */}
+          <div>
+            <h2 className="text-[11px] font-extrabold tracking-[0.28em] text-white/35 uppercase">
+              Kontak
+            </h2>
+            <ul className="mt-6 space-y-4 text-[13.5px]">
+              <li className="flex items-center gap-3">
+                <Phone className="h-4 w-4 shrink-0 text-brand-mint" />
+                <div>
+                  <a
+                    href={`tel:${company.phoneHref}`}
+                    className="focus-ring font-bold text-white/85 transition-colors hover:text-white"
+                  >
+                    {company.phone}
+                  </a>
+                  <p className="text-[11.5px] text-white/40">
+                    Respons ± 30 menit di jam kerja
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail className="h-4 w-4 shrink-0 text-brand-mint" />
+                <a
+                  href={`mailto:${company.email}`}
+                  className="focus-ring font-medium text-white/70 transition-colors hover:text-white"
+                >
+                  {company.email}
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <Clock3 className="mt-0.5 h-4 w-4 shrink-0 text-brand-mint" />
+                <div className="text-[12.5px] leading-relaxed text-white/55">
+                  {company.hours.map((row) => (
+                    <p key={row.day}>
+                      {row.day}: {row.time}
+                    </p>
+                  ))}
+                </div>
+              </li>
+            </ul>
+
+            <div className="mt-7">
+              <WhatsAppQr />
             </div>
-            <dl className="mt-8 space-y-4 text-sm">
-              <div>
-                <dt className="font-semibold text-white/90">Jam operasional</dt>
-                <dd className="mt-1 text-white/60">{company.businessHours}</dd>
-              </div>
-              <div>
-                <dt className="font-semibold text-white/90">Layanan darurat</dt>
-                <dd className="mt-1 text-white/60">
-                  {company.emergencyService}
-                </dd>
-              </div>
-              <div>
-                <dt className="font-semibold text-white/90">Area layanan</dt>
-                <dd className="mt-1 text-white/60">{company.serviceArea}</dd>
-              </div>
-            </dl>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-white/50 sm:flex-row">
-          <p className="text-white/50">© 2025 Sejukin. All rights reserved.</p>
-          <div className="flex gap-6">
-            <Link
-              to="/privacy"
-              className="focus-ring text-white/50 transition-colors hover:text-white/80"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              to="/terms"
-              className="focus-ring text-white/50 transition-colors hover:text-white/80"
-            >
-              Terms of Service
-            </Link>
+        {/* Bottom bar */}
+        <div className="mt-16 flex flex-col items-center justify-between gap-4 pt-8 text-[12px] text-white/35 md:flex-row">
+          <p>
+            © {year} {company.name}. Semua hak dilindungi undang-undang.
+          </p>
+          <p className="font-semibold text-white/45">
+            Dipercaya 500+ unit terpasang di Jabodetabek.
+          </p>
+          <div className="flex items-center gap-6">
+            {legalLinks.map((link) => (
+              <Link
+                key={link.label}
+                to={link.to}
+                className="focus-ring rounded text-[12px] font-medium text-white/35 transition-colors hover:text-white/70"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
+
+      {/* Watermark raksasa */}
+      <div
+        className="pointer-events-none relative select-none"
+        aria-hidden="true"
+      >
+        <div className="mx-auto flex max-w-7xl items-end justify-between px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
+          <span className="font-display -mb-[0.16em] text-[clamp(3rem,15vw,13rem)] leading-none font-extrabold tracking-tighter text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.07)]">
+            SEJUKIN
+          </span>
+          <Snowflake
+            className="-mb-4 h-16 w-16 text-white/[0.05] md:h-24 md:w-24"
+            strokeWidth={1.5}
+          />
+        </div>
+      </div>
+
+      {/* Kembali ke atas */}
+      <button
+        type="button"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="focus-ring group absolute top-8 right-6 grid h-11 w-11 place-items-center rounded-full border border-white/10 text-white/50 transition-all duration-300 hover:border-brand-accent-2 hover:bg-brand-accent-2 hover:text-white md:right-10"
+        aria-label="Kembali ke atas"
+      >
+        <ArrowUpRight className="h-4.5 w-4.5 transition-transform duration-300 group-hover:rotate-45" />
+      </button>
     </footer>
   );
 }
