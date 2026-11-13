@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #f0f7fa;
+  --color-brand-primary: #0f1e2d;
+  --color-brand-secondary: #5a7a8a;
+  --color-brand-accent: #0e86d4;
+  --color-brand-accent-2: #38bdf8;
+  --color-brand-mint: #6dd5c8;
+  --color-hairline: rgb(15 30 45 / 0.1);
+
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Outfit", "Inter", system-ui, sans-serif;
+
+  --shadow-soft: 0 24px 60px -32px rgb(15 30 45 / 0.35);
+
+  --animate-aurora-slow: aurora-drift 22s ease-in-out infinite alternate;
+  --animate-aurora-slower: aurora-drift 26s ease-in-out infinite alternate-reverse;
+  --animate-aurora-mid: aurora-drift 18s ease-in-out infinite alternate;
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-wa-pulse: wa-pulse 2.4s ease-out infinite;
+
+  @keyframes aurora-drift {
+    0% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+      transform: translate3d(6vw, -4vh, 0) scale(1.15);
+    }
+    100% {
+      transform: translate3d(-4vw, 5vh, 0) scale(0.95);
+    }
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes wa-pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.45;
+    }
+    70% {
+      transform: scale(1.55);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1.55);
+      opacity: 0;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-brand-bg font-sans text-brand-primary antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgb(14 134 212 / 0.2);
+}
+
+/* ---------- Semantic helpers ---------- */
+
+.text-gradient {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(
+    to right,
+    var(--color-brand-accent),
+    var(--color-brand-accent-2)
+  );
+}
+
+.bg-primary-gradient {
+  background-image: linear-gradient(
+    to right,
+    var(--color-brand-accent),
+    var(--color-brand-accent-2)
+  );
+}
+
+.glass {
+  @apply border border-hairline bg-white/60 backdrop-blur-xl;
+}
+
+.glass-strong {
+  @apply border border-hairline bg-white/70 backdrop-blur-xl;
+}
+
+.gradient-border {
+  @apply rounded-[28px] p-[1px] shadow-soft;
+  background-image: linear-gradient(
+    135deg,
+    var(--color-brand-accent),
+    var(--color-brand-accent-2),
+    var(--color-brand-mint)
+  );
+}
+
+.gradient-border > .gradient-border-inner {
+  @apply h-full rounded-[27px] bg-white;
+}
+
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-brand-accent/40;
+}
+
+/* ---------- Header nav indicator ---------- */
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 4px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--color-brand-accent);
+  transform: translateX(-50%) scaleX(0);
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.is-active::after {
+  transform: translateX(-50%) scaleX(1);
+  opacity: 1;
+}
+
+/* ---------- Scrollbar ---------- */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(15 30 45 / 0.18);
+  border-radius: 999px;
+  border: 2px solid var(--color-brand-bg);
+}
+
+/* ---------- Backdrop-filter graceful fallback ---------- */
+
+@supports not (
+  (backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px))
+) {
+  .backdrop-blur,
+  .backdrop-blur-md,
+  .backdrop-blur-xl {
+    background-color: rgb(255 255 255 / 0.85);
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .aurora-blob,
+  .marquee-track,
+  .wa-ping {
+    animation: none !important;
+  }
+}
