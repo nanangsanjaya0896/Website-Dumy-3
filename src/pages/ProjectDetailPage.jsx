@@ -9,7 +9,6 @@ import {
   ChevronLeft,
   ChevronRight,
   Layers,
-  Quote,
   ThermometerSnowflake,
   X,
 } from "lucide-react";
@@ -264,8 +263,11 @@ export default function ProjectDetailPage() {
           <Reveal className="mt-10">
             <div className="gradient-border">
               <div className="gradient-border-inner relative px-7 py-10 md:px-12 md:py-12">
-                <span className="bg-primary-gradient absolute -top-6 left-10 grid h-12 w-12 place-items-center rounded-2xl text-white shadow-lg shadow-brand-accent/30">
-                  <Quote size={20} />
+                <span
+                  aria-hidden="true"
+                  className="font-display absolute -top-7 left-10 grid h-12 w-12 place-items-center rounded-2xl border border-brand-silver/70 bg-white text-3xl leading-none font-extrabold text-brand-accent-ink/40"
+                >
+                  &ldquo;
                 </span>
                 <blockquote className="font-display text-xl leading-snug font-bold tracking-tight text-balance text-brand-primary md:text-2xl">
                   “{project.testimonial.quote}”

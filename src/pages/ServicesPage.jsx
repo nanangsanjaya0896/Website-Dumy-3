@@ -1,15 +1,5 @@
 import { Link } from "react-router";
 import { motion } from "motion/react";
-import {
-  ArrowRight,
-  BadgeCheck,
-  CalendarDays,
-  CheckCircle2,
-  FileText,
-  Gauge,
-  Search,
-  Wrench,
-} from "lucide-react";
 import PageHeader from "../components/PageHeader";
 import Reveal from "../components/Reveal";
 import ServiceAccordion from "../components/ServiceAccordion";
@@ -20,32 +10,26 @@ import { services } from "../data/services";
 
 const processSteps = [
   {
-    icon: CalendarDays,
     title: "Booking",
     description: "Hubungi kami via WhatsApp atau formulir.",
   },
   {
-    icon: Search,
     title: "Survei",
     description: "Teknisi cek lokasi & kalkulasi kebutuhan.",
   },
   {
-    icon: FileText,
     title: "Estimasi",
     description: "Penawaran harga tertulis, tanpa biaya tersembunyi.",
   },
   {
-    icon: Wrench,
     title: "Pengerjaan",
     description: "Dikerjakan rapi sesuai SOP pabrikan.",
   },
   {
-    icon: Gauge,
     title: "Testing",
     description: "Uji suhu, tekanan freon, dan drain.",
   },
   {
-    icon: BadgeCheck,
     title: "Serah Terima",
     description: "Garansi tertulis & edukasi perawatan.",
   },
@@ -123,14 +107,9 @@ export default function ServicesPage() {
                   whileHover={{ y: -6 }}
                   className="glass flex h-full flex-col rounded-[28px] p-7 shadow-sm transition-shadow hover:shadow-soft"
                 >
-                  <div className="flex items-center justify-between">
-                    <span className="bg-primary-gradient grid h-12 w-12 place-items-center rounded-full text-white shadow-md shadow-brand-accent/30">
-                      <service.icon size={21} />
-                    </span>
-                    <span className="font-display text-sm font-extrabold text-brand-accent/50">
-                      {service.number}
-                    </span>
-                  </div>
+                  <span className="font-display block text-4xl font-extrabold tracking-tight text-brand-accent-ink/20">
+                    {service.number}
+                  </span>
                   <h3 className="mt-5 display-card text-xl">{service.title}</h3>
                   <p className="mt-2.5 flex-1 text-sm leading-relaxed text-brand-secondary">
                     {service.description}
@@ -162,8 +141,8 @@ export default function ServicesPage() {
               {processSteps.map((step, index) => (
                 <Reveal key={step.title} delay={index * 0.06}>
                   <div className="relative text-center">
-                    <span className="bg-primary-gradient relative z-10 mx-auto grid h-12 w-12 place-items-center rounded-full text-white shadow-md shadow-brand-accent/30 ring-4 ring-brand-bg">
-                      <step.icon size={20} />
+                    <span className="font-display relative z-10 mx-auto grid h-12 w-12 place-items-center rounded-full border border-brand-accent-ink/25 bg-white text-sm font-extrabold text-brand-accent-ink ring-4 ring-brand-bg">
+                      {String(index + 1).padStart(2, "0")}
                     </span>
                     <h3 className="mt-4 display-card">{step.title}</h3>
                     <p className="mt-1.5 text-xs leading-relaxed text-brand-secondary">

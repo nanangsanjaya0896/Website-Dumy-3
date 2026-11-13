@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { ArrowUpRight, BadgeCheck } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { buildSrcSet } from "../lib/img";
 import Reveal from "./Reveal";
 import { values } from "../data/company";
@@ -25,10 +25,10 @@ export default function AboutPreview() {
               untuk setiap pekerjaan.
             </p>
             <ul className="mt-8 grid gap-4 sm:grid-cols-2">
-              {values.map((value) => (
+              {values.map((value, i) => (
                 <li key={value.title} className="flex items-start gap-3">
-                  <span className="bg-primary-gradient mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full text-white">
-                    <BadgeCheck size={15} />
+                  <span className="font-display mt-0.5 w-6 shrink-0 text-[13px] font-extrabold tracking-[0.12em] text-brand-accent-ink/70">
+                    {String(i + 1).padStart(2, "0")}
                   </span>
                   <div>
                     <p className="font-semibold text-brand-primary">
@@ -75,9 +75,6 @@ export default function AboutPreview() {
                       Menjangkau seluruh Jabodetabek setiap hari
                     </p>
                   </div>
-                  <span className="bg-primary-gradient grid h-12 w-12 shrink-0 place-items-center rounded-2xl text-white shadow-lg shadow-brand-accent/30">
-                    <BadgeCheck size={22} />
-                  </span>
                 </div>
               </div>
             </div>

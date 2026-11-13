@@ -28,8 +28,8 @@ export default function ServicesPreview() {
                 whileHover={{ y: -6 }}
                 className="glass group flex h-full flex-col rounded-[28px] p-7 shadow-soft transition-colors hover:border-brand-accent/40"
               >
-                <span className="bg-primary-gradient grid h-12 w-12 place-items-center rounded-2xl text-white shadow-md shadow-brand-accent/30">
-                  <service.icon size={22} />
+                <span className="font-display text-3xl font-extrabold tracking-tight text-brand-accent-ink/25">
+                  {service.number}
                 </span>
                 <h3 className="mt-5 display-card text-lg">{service.title}</h3>
                 <p className="mt-2.5 flex-1 text-sm leading-relaxed text-brand-secondary">

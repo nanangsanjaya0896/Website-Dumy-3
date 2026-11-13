@@ -1,10 +1,10 @@
 import { motion, useMotionValue, useReducedMotion } from "motion/react";
-import { Snowflake, Star, Clock4, AirVent } from "lucide-react";
+import { Snowflake } from "lucide-react";
 
 const miniStats = [
-  { icon: AirVent, value: "500+", label: "Unit terpasang" },
-  { icon: Star, value: "4.9/5", label: "Rating pelanggan" },
-  { icon: Clock4, value: "24/7", label: "Siaga darurat" },
+  { value: "500+", label: "Unit terpasang" },
+  { value: "4.9/5", label: "Rating pelanggan" },
+  { value: "24/7", label: "Siaga darurat" },
 ];
 
 const DRAG_LIMIT = 50;
@@ -108,11 +108,7 @@ export default function CompanyCard({ className = "" }) {
                     key={stat.label}
                     className="rounded-2xl border border-hairline bg-brand-bg/70 px-2 py-3 text-center"
                   >
-                    <stat.icon
-                      size={14}
-                      className="mx-auto text-brand-accent"
-                    />
-                    <p className="mt-1.5 font-display text-sm font-extrabold text-brand-primary">
+                    <p className="font-display text-sm font-extrabold text-brand-primary">
                       {stat.value}
                     </p>
                     <p className="mt-0.5 text-[10px] leading-tight font-medium text-brand-secondary">

@@ -1,12 +1,15 @@
 import { Link } from "react-router";
 import { motion } from "motion/react";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function HeroContent() {
   return (
     <>
       <div className="gsap-hero-eyebrow mb-6 inline-flex items-center space-x-3 rounded-full border border-white/50 bg-white/70 px-4 py-1.5 text-[11px] font-semibold tracking-[0.14em] text-brand-secondary shadow-sm backdrop-blur-md">
-        <ShieldCheck size={14} className="text-brand-accent" />
+        <span
+          aria-hidden="true"
+          className="h-1.5 w-1.5 rounded-full bg-brand-accent"
+        />
         <span>TERPERCAYA • CEPAT • BERGARANSI</span>
       </div>
 

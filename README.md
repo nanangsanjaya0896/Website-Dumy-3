@@ -135,3 +135,10 @@ tracking, dan warna headline tidak lagi ditulis ulang di tiap komponen.
 - **Kartu profil** (`CompanyCard`): bisa digeser dengan panah keyboard (Home = reset), semantik `role="group"`, bukan `role="img"`.
 - **Marquee merek**: dekoratif (`aria-hidden`), daftar merek disediakan sebagai teks `sr-only`.
 - **Data kontak**: lihat peringatan di kepala `src/data/company.js` — nomor/email masih contoh.
+
+## Ikon & citra
+
+- **Tanpa ilustrasi hasil AI.** Avatar robot di widget chat sudah dihapus (`src/assets/sejukin-ai-robot.jpg` ikut dihapus); penanda bot sekarang monogram tipografis (lingkaran navy + snowflake), konsisten dengan logo.
+- **Ikon dekoratif diganti tipografi.** Kotak ikon gradient di kartu layanan, kartu "alasan memilih", dan daftar nilai kini memakai **nomor** (`01`, `02`, …) dalam Plus Jakarta Sans — bukan ikon Lucide generik. Tanda kutip sitasi memakai glyph `“`, bukan ikon `Quote`.
+- **Ikon fungsional tetap dipertahankan** karena membawa informasi: panah & chevron navigasi, telepon/email/lokasi/jam di footer & halaman kontak, cek di daftar deliverables, QR WhatsApp.
+- Data ikon yang tidak terpakai sudah dibuang dari `src/data/services.js`, `AboutPage`, `ServicesPage`, dan `ProjectsPage`.

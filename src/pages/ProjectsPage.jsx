@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router";
 import { AnimatePresence, motion } from "motion/react";
-import { ArrowRight, Building2, CalendarDays, Layers } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import PageHeader from "../components/PageHeader";
 import Reveal from "../components/Reveal";
 import ProjectStack from "../components/ProjectStack";
@@ -11,9 +11,9 @@ import ContactCTA from "../components/ContactCTA";
 import { projects, projectCategories } from "../data/projects";
 
 const headlineStats = [
-  { icon: Layers, value: "500+", label: "Unit terpasang" },
-  { icon: Building2, value: "50+", label: "Klien korporat" },
-  { icon: CalendarDays, value: "10 thn", label: "Pengalaman" },
+  { value: "500+", label: "Unit terpasang" },
+  { value: "50+", label: "Klien korporat" },
+  { value: "10 thn", label: "Pengalaman" },
 ];
 
 function FeaturedStack() {
@@ -129,7 +129,6 @@ export default function ProjectsPage() {
               key={stat.label}
               className="glass inline-flex items-center gap-2.5 rounded-full px-5 py-2.5 text-sm font-semibold text-brand-primary/80"
             >
-              <stat.icon size={15} className="text-brand-accent" />
               {stat.value} {stat.label}
             </span>
           ))}

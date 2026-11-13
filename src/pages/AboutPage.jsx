@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import { BadgeCheck, Quote, Receipt, ShieldCheck, Zap } from "lucide-react";
 import PageHeader from "../components/PageHeader";
 import Reveal from "../components/Reveal";
 import ExperienceTimeline from "../components/ExperienceTimeline";
@@ -13,25 +12,21 @@ const ABOUT_PAGE_IMG =
 
 const reasons = [
   {
-    icon: BadgeCheck,
     title: "Teknisi Bersertifikat",
     description:
       "Seluruh teknisi memegang sertifikasi resmi pabrikan dan mengikuti pelatihan ulang setiap tahun.",
   },
   {
-    icon: Receipt,
     title: "Harga Transparan",
     description:
       "Estimasi tertulis sebelum pengerjaan dimulai. Tidak ada biaya kejutan di akhir pekerjaan.",
   },
   {
-    icon: ShieldCheck,
     title: "Garansi Layanan",
     description:
       "Garansi tertulis hingga 90 hari untuk setiap pemasangan dan perbaikan — dihormati tanpa drama.",
   },
   {
-    icon: Zap,
     title: "Respons Cepat",
     description:
       "Konfirmasi booking dalam 30 menit pada jam kerja, siaga darurat 24/7 untuk pelanggan kontrak.",
@@ -118,8 +113,8 @@ export default function AboutPage() {
                   whileHover={{ y: -6 }}
                   className="glass h-full rounded-[28px] p-7 transition-all hover:border-brand-accent/50 hover:shadow-soft"
                 >
-                  <span className="bg-primary-gradient grid h-12 w-12 place-items-center rounded-2xl text-white shadow-md shadow-brand-accent/30">
-                    <reason.icon size={22} />
+                  <span className="font-display block text-4xl font-extrabold tracking-tight text-brand-accent-ink/20">
+                    {String(index + 1).padStart(2, "0")}
                   </span>
                   <h3 className="mt-5 display-card text-lg">{reason.title}</h3>
                   <p className="mt-2.5 text-sm leading-relaxed text-brand-secondary">
@@ -160,7 +155,12 @@ export default function AboutPage() {
             <div className="gradient-border">
               <div className="gradient-border-inner relative px-8 py-14 text-center md:px-20 md:py-16">
                 <span className="bg-primary-gradient mx-auto grid h-14 w-14 place-items-center rounded-2xl text-white shadow-lg shadow-brand-accent/30">
-                  <Quote size={24} />
+                  <span
+                    aria-hidden="true"
+                    className="font-display text-5xl leading-none text-brand-accent-ink/25"
+                  >
+                    &ldquo;
+                  </span>
                 </span>
                 <blockquote className="mx-auto mt-8 max-w-3xl font-display text-2xl leading-snug font-bold tracking-tight text-balance text-brand-primary md:text-3xl">
                   “Kami percaya kenyamanan ruangan bukan kemewahan, melainkan

@@ -1,16 +1,6 @@
-import {
-  AirVent,
-  Sparkles,
-  Wrench,
-  Droplets,
-  Move,
-  ClipboardCheck,
-} from "lucide-react";
-
 export const services = [
   {
     number: "01",
-    icon: AirVent,
     title: "Pemasangan AC Baru",
     description:
       "Pemasangan AC split, cassette, standing, hingga VRF untuk rumah, kantor, dan bangunan komersial — lengkap dengan perhitungan kebutuhan PK yang presisi.",
@@ -26,7 +16,6 @@ export const services = [
   },
   {
     number: "02",
-    icon: Sparkles,
     title: "Servis & Perawatan Rutin",
     description:
       "Cuci AC menyeluruh agar udara tetap bersih, dingin maksimal, dan konsumsi listrik lebih hemat setiap bulannya.",
@@ -42,7 +31,6 @@ export const services = [
   },
   {
     number: "03",
-    icon: Wrench,
     title: "Perbaikan & Troubleshooting",
     description:
       "Diagnosis akurat untuk semua keluhan: AC kurang dingin, menetes, berisik, mati total, hingga error pada modul PCB.",
@@ -58,7 +46,6 @@ export const services = [
   },
   {
     number: "04",
-    icon: Droplets,
     title: "Isi Ulang Freon",
     description:
       "Pengisian freon R32, R410A, dan R22 dengan takaran presisi sesuai spesifikasi nameplate pabrikan — bukan asal isi.",
@@ -74,7 +61,6 @@ export const services = [
   },
   {
     number: "05",
-    icon: Move,
     title: "Bongkar Pasang AC (Relocate)",
     description:
       "Pindah AC antar ruangan atau antar gedung dengan aman — tanpa risiko kebocoran freon maupun kerusakan unit.",
@@ -90,7 +76,6 @@ export const services = [
   },
   {
     number: "06",
-    icon: ClipboardCheck,
     title: "Kontrak Perawatan Berkala",
     description:
       "Program perawatan terjadwal untuk kantor, hotel, klinik, dan gedung komersial dengan laporan kondisi unit digital.",

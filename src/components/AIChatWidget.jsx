@@ -1,7 +1,23 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { ArrowUpRight, Send, X } from "lucide-react";
-import robotLogo from "../assets/sejukin-ai-robot.jpg";
+import { ArrowUpRight, Send, Snowflake, X } from "lucide-react";
+
+/* Penanda bot: monogram tipografis, bukan ilustrasi robot hasil AI */
+function BotMark({ size = "md" }) {
+  const box = size === "lg" ? "h-10 w-10 rounded-2xl" : "h-7 w-7 rounded-full";
+  return (
+    <span
+      aria-hidden="true"
+      className={`${box} grid shrink-0 place-items-center bg-brand-navy text-white`}
+    >
+      <Snowflake
+        className={size === "lg" ? "h-5 w-5" : "h-3.5 w-3.5"}
+        strokeWidth={2}
+        fill="rgba(91, 163, 217, 0.25)"
+      />
+    </span>
+  );
+}
 import { company } from "../data/company";
 import { services } from "../data/services";
 import { faqs } from "../data/faqs";
@@ -244,14 +260,7 @@ export default function AIChatWidget() {
                 className="pointer-events-none absolute -top-10 -right-6 h-24 w-24 rounded-full bg-brand-accent/40 blur-2xl"
               />
               <div className="relative flex items-center gap-3">
-                <span className="h-10 w-10 shrink-0 overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/25">
-                  <img
-                    src={robotLogo}
-                    alt=""
-                    className="h-full w-full object-cover"
-                    loading="eager"
-                  />
-                </span>
+                <BotMark size="lg" />
                 <div className="min-w-0 flex-1">
                   <p className="font-display text-sm font-extrabold tracking-wide">
                     Sejukin AI
@@ -284,12 +293,8 @@ export default function AIChatWidget() {
                   className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   {message.role === "bot" && (
-                    <span className="mt-auto mr-2 h-7 w-7 shrink-0 overflow-hidden rounded-full ring-1 ring-hairline">
-                      <img
-                        src={robotLogo}
-                        alt=""
-                        className="h-full w-full object-cover"
-                      />
+                    <span className="mt-auto mr-2">
+                      <BotMark />
                     </span>
                   )}
                   <div
@@ -315,12 +320,8 @@ export default function AIChatWidget() {
 
               {typing && (
                 <div className="flex justify-start">
-                  <span className="mt-auto mr-2 h-7 w-7 shrink-0 overflow-hidden rounded-full ring-1 ring-hairline">
-                    <img
-                      src={robotLogo}
-                      alt=""
-                      className="h-full w-full object-cover"
-                    />
+                  <span className="mt-auto mr-2">
+                    <BotMark />
                   </span>
                   <div className="flex items-center gap-1 rounded-2xl border border-hairline bg-white/85 px-3.5 py-3">
                     {[0, 1, 2].map((dot) => (
@@ -402,11 +403,12 @@ export default function AIChatWidget() {
         whileTap={{ scale: 0.94 }}
         className="group fixed right-6 bottom-24 z-50"
       >
-        <span className="relative grid h-14 w-14 place-items-center overflow-hidden rounded-full bg-brand-navy text-white shadow-[0_10px_28px_-6px_rgb(11_37_69/0.55)] ring-2 ring-white/70 transition-shadow group-hover:shadow-[0_14px_34px_-6px_rgb(11_37_69/0.7)]">
-          <img
-            src={robotLogo}
-            alt="Sejukin AI"
-            className="h-full w-full object-cover"
+        <span className="relative grid h-14 w-14 place-items-center rounded-full bg-brand-navy text-white shadow-[0_10px_28px_-6px_rgb(11_37_69/0.55)] ring-2 ring-white/70 transition-shadow group-hover:shadow-[0_14px_34px_-6px_rgb(11_37_69/0.7)]">
+          <Snowflake
+            className="h-6 w-6"
+            strokeWidth={2}
+            fill="rgba(91, 163, 217, 0.25)"
+            aria-label="Sejukin AI"
           />
           <AnimatePresence initial={false}>
             {open && (
