@@ -95,7 +95,7 @@ tracking, dan warna headline tidak lagi ditulis ulang di tiap komponen.
 
 ## Catatan Desain
 
-- Palet: `brand-bg #F0F7FA`, headline `#14212B`, teks isi `#4A5C69`, permukaan gelap `#0C2231`, aksen gradasi `#0B5C8A → #0E86D4`, mint `#6DD5C8`.
+- Palet: `brand-bg #F0F7FA`, headline `#14212B`, teks isi `#4A5C69`, footer `brand-navy #0B2545`, aksen gradasi `#0B5C8A → #0E86D4`, mint `#6DD5C8`.
 - Kartu memakai glassmorphism (`bg-white/60 backdrop-blur-xl border-hairline`) dan radius `28px`.
 - Aurora background bergerak lambat di luar hero dan otomatis berhenti saat `prefers-reduced-motion` aktif.
 - Timeline GSAP hero memiliki safety timeout agar konten tidak pernah tertinggal dalam keadaan tersembunyi.

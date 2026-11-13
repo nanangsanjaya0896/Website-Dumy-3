@@ -54,7 +54,7 @@ export default function Footer() {
   return (
     <footer className="pt-28 pb-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
-        <div className="rounded-[28px] bg-brand-primary p-8 text-white shadow-soft md:p-12 lg:p-16">
+        <div className="rounded-[28px] bg-brand-navy p-8 text-white shadow-soft md:p-12 lg:p-16">
           <div className="grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-5">
               <div className="flex items-center gap-2.5">
