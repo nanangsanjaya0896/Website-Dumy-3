@@ -87,15 +87,15 @@ tracking, dan warna headline tidak lagi ditulis ulang di tiap komponen.
 | `.eyebrow`       | Label kecil di atas headline                      | 11px, tracking 0.18em   |
 
 - Font: **Outfit** (headline, weight 800, tracking −0.024em s.d. −0.032em) dan **Inter** (teks isi).
-- Warna teks: headline `brand-ink #0E6BA8`, sub-headline & isi `brand-secondary #3A6076`
-  (kontras 5.3:1 dan 6.2:1 di atas `brand-bg`, lolos WCAG AA).
+- Warna teks: headline `brand-ink #14212B`, sub-headline & isi `brand-secondary #4A5C69`
+  (kontras 15.1:1 dan 6.4:1 di atas `brand-bg`, lolos WCAG AA/AAA).
 - Label aksen kecil memakai `brand-accent-ink #0B5C8A` (6.7:1); `brand-accent #0E86D4`
   hanya untuk isian/gradasi karena terlalu terang untuk teks kecil.
 - `text-wrap: balance` untuk headline dan `pretty` untuk paragraf.
 
 ## Catatan Desain
 
-- Palet: `brand-bg #F0F7FA`, headline `#0E6BA8`, teks isi `#3A6076`, permukaan gelap `#0C2231`, aksen gradasi `#0B5C8A → #0E86D4`, mint `#6DD5C8`.
+- Palet: `brand-bg #F0F7FA`, headline `#14212B`, teks isi `#4A5C69`, permukaan gelap `#0C2231`, aksen gradasi `#0B5C8A → #0E86D4`, mint `#6DD5C8`.
 - Kartu memakai glassmorphism (`bg-white/60 backdrop-blur-xl border-hairline`) dan radius `28px`.
 - Aurora background bergerak lambat di luar hero dan otomatis berhenti saat `prefers-reduced-motion` aktif.
 - Timeline GSAP hero memiliki safety timeout agar konten tidak pernah tertinggal dalam keadaan tersembunyi.
