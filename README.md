@@ -71,6 +71,14 @@ src/
 | `/contact`       | Kontak             |
 | `*`              | 404                |
 
+## Media Hero (Section 1)
+
+Video background hero diatur di `src/data/heroMedia.js`.
+
+- Taruh file **`public/videos/hero.mp4`** (MP4/H.264, 1080p, ≤ 8 MB, 8–15 detik) → langsung dipakai.
+- Poster opsional: **`public/videos/hero-poster.jpg`**.
+- Selama file lokal belum ada, hero memakai URL video cadangan sehingga tidak pernah kosong.
+
 ## Tipografi
 
 Skala tipografi terpusat di `src/index.css` (blok `@layer components`), jadi ukuran,

@@ -1,15 +1,15 @@
-import { useRef, useState } from "react";
-
-const PRIMARY_SRC =
-  "https://cdn.pixabay.com/video/2023/07/26/173158-849610807_large.mp4";
-const FALLBACK_SRC =
-  "https://videos.pexels.com/video-files/11519743/11519743-hd_1920_1080_50fps.mp4";
-const POSTER =
-  "https://images.unsplash.com/photo-1517483000871-1dbf64a6e1c6?q=80&w=1920&auto=format&fit=crop";
+import { useEffect, useRef, useState } from "react";
+import {
+  heroPosterFallback,
+  heroPosterLocal,
+  heroVideoSources,
+} from "../data/heroMedia";
 
 export default function VideoBackground({ onVideoComplete }) {
-  const [src, setSrc] = useState(PRIMARY_SRC);
+  const [srcIndex, setSrcIndex] = useState(0);
+  const [poster, setPoster] = useState(heroPosterLocal);
   const notified = useRef(false);
+  const src = heroVideoSources[srcIndex];
 
   const notify = () => {
     if (!notified.current) {
@@ -17,6 +17,14 @@ export default function VideoBackground({ onVideoComplete }) {
       onVideoComplete?.();
     }
   };
+
+  // Poster lokal opsional: kalau belum ada, pakai gambar cadangan.
+  useEffect(() => {
+    if (!heroPosterLocal) return;
+    const image = new Image();
+    image.onerror = () => setPoster(heroPosterFallback);
+    image.src = heroPosterLocal;
+  }, []);
 
   return (
     <div className="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
@@ -28,14 +36,16 @@ export default function VideoBackground({ onVideoComplete }) {
         muted
         playsInline
         preload="auto"
-        poster={POSTER}
+        poster={poster}
+        src={src}
         onCanPlay={notify}
         onError={() => {
-          if (src !== FALLBACK_SRC) setSrc(FALLBACK_SRC);
+          // Coba sumber berikutnya (lokal → cadangan) agar hero tetap hidup.
+          if (srcIndex < heroVideoSources.length - 1) {
+            setSrcIndex((index) => index + 1);
+          }
         }}
-      >
-        <source src={src} type="video/mp4" />
-      </video>
+      />
 
       {/* Top blend into navigation */}
       <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-brand-bg via-brand-bg/55 to-transparent" />
