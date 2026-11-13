@@ -47,8 +47,8 @@ export default function Header() {
     <header
       className={`gsap-header fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled || open
-          ? "border-b border-hairline bg-white/80 shadow-[0_14px_40px_-24px_rgb(12_37_69/0.45)] backdrop-blur-xl"
-          : "border-b border-white/50 bg-white/60 shadow-[0_16px_40px_-26px_rgb(12_37_69/0.5)] backdrop-blur-md"
+          ? "border-b border-hairline bg-white/70 shadow-[0_10px_40px_-24px_rgb(15_30_45/0.35)] backdrop-blur-xl"
+          : "border-b border-transparent bg-transparent"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
@@ -74,7 +74,7 @@ export default function Header() {
                 <Link
                   key={link.label}
                   to={link.to}
-                  className="nav-link focus-ring text-sm font-medium text-brand-primary/90 transition-colors hover:text-brand-accent"
+                  className="nav-link focus-ring text-sm font-medium text-brand-primary/80 transition-colors hover:text-brand-accent"
                 >
                   {link.label}
                 </Link>
@@ -85,7 +85,7 @@ export default function Header() {
                   end={link.end}
                   className={({ isActive }) =>
                     `nav-link focus-ring text-sm font-medium transition-colors hover:text-brand-accent ${
-                      isActive ? "is-active text-brand-accent" : "text-brand-primary/90"
+                      isActive ? "is-active text-brand-accent" : "text-brand-primary/80"
                     }`
                   }
                 >
