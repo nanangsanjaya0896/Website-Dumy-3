@@ -161,6 +161,9 @@ export default function Footer() {
           <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-white/50 sm:flex-row">
             <p className="text-white/50">© 2025 Sejukin. All rights reserved.</p>
             <div className="flex gap-6">
+              <Link to="/warna" className="focus-ring text-white/50 transition-colors hover:text-brand-accent-2">
+                Pilih warna teks
+              </Link>
               <Link to="/privacy" className="focus-ring text-white/50 transition-colors hover:text-white/80">
                 Privacy Policy
               </Link>
