@@ -8,7 +8,7 @@ export default function ServicesPreview() {
   const featured = services.slice(0, 4);
 
   return (
-    <section className="py-24 md:py-32">
+    <section className="bg-brand-ice py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">Layanan utama</p>

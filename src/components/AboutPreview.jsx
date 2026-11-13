@@ -9,7 +9,7 @@ const ABOUT_IMG =
 
 export default function AboutPreview() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="bg-white py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
           <Reveal className="lg:col-span-6">

@@ -21,23 +21,8 @@
 
   --shadow-soft: 0 24px 60px -32px rgb(10 22 40 / 0.28);
 
-  --animate-aurora-slow: aurora-drift 22s ease-in-out infinite alternate;
-  --animate-aurora-slower: aurora-drift 26s ease-in-out infinite alternate-reverse;
-  --animate-aurora-mid: aurora-drift 18s ease-in-out infinite alternate;
   --animate-marquee: marquee 38s linear infinite;
   --animate-wa-pulse: wa-pulse 2.4s ease-out infinite;
-
-  @keyframes aurora-drift {
-    0% {
-      transform: translate3d(0, 0, 0) scale(1);
-    }
-    50% {
-      transform: translate3d(6vw, -4vh, 0) scale(1.15);
-    }
-    100% {
-      transform: translate3d(-4vw, 5vh, 0) scale(0.95);
-    }
-  }
 
   @keyframes marquee {
     from {
@@ -91,7 +76,9 @@ body {
     color: var(--color-brand-ink);
     text-wrap: balance;
     font-kerning: normal;
-    font-feature-settings: "kern" 1, "liga" 1;
+    font-feature-settings:
+      "kern" 1,
+      "liga" 1;
   }
 
   .display-hero {
@@ -186,11 +173,11 @@ body {
 }
 
 .glass {
-  @apply border border-hairline bg-white/60 backdrop-blur-xl;
+  @apply border border-brand-silver/60 bg-white/80 backdrop-blur-xl;
 }
 
 .glass-strong {
-  @apply border border-hairline bg-white/70 backdrop-blur-xl;
+  @apply border border-brand-silver/60 bg-white/90 backdrop-blur-xl;
 }
 
 .gradient-border {
@@ -305,7 +292,6 @@ body {
   html {
     scroll-behavior: auto;
   }
-  .aurora-blob,
   .wa-ping {
     animation: none !important;
   }

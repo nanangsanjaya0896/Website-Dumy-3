@@ -25,7 +25,7 @@ function StatItem({ stat, index }) {
 
 export default function StatCounter() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="bg-gradient-to-b from-white via-brand-bg to-brand-ice py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">Jejak Sejukin</p>

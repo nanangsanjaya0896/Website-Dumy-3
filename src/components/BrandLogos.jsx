@@ -23,7 +23,7 @@ function BrandChip({ brand }) {
 
 export default function BrandLogos() {
   return (
-    <section className="border-y border-hairline bg-white/40 py-10 backdrop-blur-sm">
+    <section className="border-y border-brand-silver/50 bg-white py-10">
       <p className="eyebrow mb-7 px-4 text-center text-brand-secondary">
         Melayani semua merek AC utama
       </p>

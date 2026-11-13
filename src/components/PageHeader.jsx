@@ -8,7 +8,7 @@ export default function PageHeader({ label, title, description, children }) {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
-          className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold tracking-wider text-brand-accent uppercase"
+          className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold tracking-wider text-brand-accent-ink uppercase"
         >
           {label}
         </motion.span>
