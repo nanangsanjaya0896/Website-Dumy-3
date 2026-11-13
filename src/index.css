@@ -3,9 +3,11 @@
 @theme {
   --color-brand-bg: #f0f7fa;
   --color-brand-primary: #0c2231;
-  --color-brand-secondary: #3d5b6a;
+  --color-brand-ink: #161c1f;
+  --color-brand-secondary: #4a5760;
   --color-brand-accent: #0e86d4;
   --color-brand-accent-2: #38bdf8;
+  --color-brand-accent-ink: #0b5c8a;
   --color-brand-mint: #6dd5c8;
   --color-hairline: rgb(15 30 45 / 0.1);
 
@@ -80,7 +82,7 @@ body {
   .display-section-sm {
     font-family: var(--font-display);
     font-weight: 800;
-    color: var(--color-brand-primary);
+    color: var(--color-brand-ink);
     text-wrap: balance;
     font-kerning: normal;
     font-feature-settings: "kern" 1, "liga" 1;
@@ -113,7 +115,7 @@ body {
   .display-card {
     font-family: var(--font-display);
     font-weight: 800;
-    color: var(--color-brand-primary);
+    color: var(--color-brand-ink);
     line-height: 1.25;
     letter-spacing: -0.014em;
     text-wrap: balance;
@@ -145,13 +147,22 @@ body {
     line-height: 1;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--color-brand-accent);
+    color: var(--color-brand-accent-ink);
   }
 }
 
 /* ---------- Semantic helpers ---------- */
 
 .text-gradient {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(
+    to right,
+    var(--color-brand-accent-ink),
+    var(--color-brand-accent)
+  );
+}
+
+.text-gradient-bright {
   @apply bg-clip-text text-transparent;
   background-image: linear-gradient(
     to right,

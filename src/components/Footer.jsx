@@ -63,7 +63,7 @@ export default function Footer() {
               </div>
               <h2 className="mt-6 max-w-md display-section-sm">
                 Udara sejuk, ruangan nyaman — mulai dari{" "}
-                <span className="text-gradient">Sejukin</span>.
+                <span className="text-gradient-bright">Sejukin</span>.
               </h2>
               <div className="mt-6 inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-xs font-medium text-white/80">
                 <span className="relative flex h-2 w-2">
