@@ -73,7 +73,7 @@ src/
 
 ## Media Hero (Section 1)
 
-Video background hero diatur di `src/data/heroMedia.js`.
+Video background hero diatur di `src/data/heroMedia.js` (panduan lengkap: `docs/hero-media.md`).
 
 - Taruh file **`public/videos/hero.mp4`** (MP4/H.264, 1080p, ≤ 8 MB, 8–15 detik) → langsung dipakai.
 - Poster opsional: **`public/videos/hero-poster.jpg`**.
