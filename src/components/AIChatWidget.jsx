@@ -36,7 +36,7 @@ function buildReply(input) {
   if (has("cuci", "servis", "service", "perawatan", "maintenance", "bersih")) {
     return `Servis & cuci AC mulai Rp 75.000/unit, sekitar 60 menit per unit. Termasuk pembersihan filter, coil, blower, saluran drain, plus disinfektan anti-bau. Garansi servis 30 hari.`;
   }
-  if (has("freon", "isı ulang", "isi ulang", "bocor")) {
+  if (has("freon", "isi ulang", "bocor")) {
     return `Untuk isi freon, teknisi mengecek dulu kebocoran dan tekanan sistem — karena isi ulang tanpa perbaikan kebocoran hanya bertahan sebentar. Biaya pengecekan mulai Rp 150.000, dan hasilnya kami jelaskan transparan sebelum pengerjaan.`;
   }
   if (has("rusak", "mati", "tidak dingin", "gak dingin", "ga dingin", "error", "berisik", "menetes", "perbaikan", "troubleshoot")) {
