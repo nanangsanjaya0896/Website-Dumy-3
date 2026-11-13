@@ -1,13 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import {
-  ArrowUpRight,
-  Bot,
-  MessageSquareText,
-  Send,
-  Sparkles,
-  X,
-} from "lucide-react";
+import { ArrowUpRight, Send, X } from "lucide-react";
+import robotLogo from "../assets/sejukin-ai-robot.jpg";
 import { company } from "../data/company";
 import { services } from "../data/services";
 import { faqs } from "../data/faqs";
@@ -177,8 +171,13 @@ export default function AIChatWidget() {
                 className="pointer-events-none absolute -top-10 -right-6 h-24 w-24 rounded-full bg-brand-accent/40 blur-2xl"
               />
               <div className="relative flex items-center gap-3">
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-white/10 ring-1 ring-white/20">
-                  <Sparkles size={18} className="text-brand-accent-2" />
+                <span className="h-10 w-10 shrink-0 overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/25">
+                  <img
+                    src={robotLogo}
+                    alt=""
+                    className="h-full w-full object-cover"
+                    loading="eager"
+                  />
                 </span>
                 <div className="min-w-0 flex-1">
                   <p className="font-display text-sm font-extrabold tracking-wide">
@@ -212,8 +211,8 @@ export default function AIChatWidget() {
                   className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   {message.role === "bot" && (
-                    <span className="mt-auto mr-2 grid h-7 w-7 shrink-0 place-items-center rounded-full bg-brand-navy text-white">
-                      <Bot size={14} />
+                    <span className="mt-auto mr-2 h-7 w-7 shrink-0 overflow-hidden rounded-full ring-1 ring-hairline">
+                      <img src={robotLogo} alt="" className="h-full w-full object-cover" />
                     </span>
                   )}
                   <div
@@ -237,8 +236,8 @@ export default function AIChatWidget() {
 
               {typing && (
                 <div className="flex justify-start">
-                  <span className="mt-auto mr-2 grid h-7 w-7 shrink-0 place-items-center rounded-full bg-brand-navy text-white">
-                    <Bot size={14} />
+                  <span className="mt-auto mr-2 h-7 w-7 shrink-0 overflow-hidden rounded-full ring-1 ring-hairline">
+                    <img src={robotLogo} alt="" className="h-full w-full object-cover" />
                   </span>
                   <div className="flex items-center gap-1 rounded-2xl border border-hairline bg-white/85 px-3.5 py-3">
                     {[0, 1, 2].map((dot) => (
@@ -320,27 +319,23 @@ export default function AIChatWidget() {
         whileTap={{ scale: 0.94 }}
         className="group fixed right-6 bottom-24 z-50"
       >
-        <span className="relative grid h-14 w-14 place-items-center rounded-full bg-brand-navy text-white shadow-[0_10px_28px_-6px_rgb(11_37_69/0.55)] transition-shadow group-hover:shadow-[0_14px_34px_-6px_rgb(11_37_69/0.7)]">
-          <AnimatePresence mode="wait" initial={false}>
-            {open ? (
+        <span className="relative grid h-14 w-14 place-items-center overflow-hidden rounded-full bg-brand-navy text-white shadow-[0_10px_28px_-6px_rgb(11_37_69/0.55)] ring-2 ring-white/70 transition-shadow group-hover:shadow-[0_14px_34px_-6px_rgb(11_37_69/0.7)]">
+          <img
+            src={robotLogo}
+            alt="Sejukin AI"
+            className="h-full w-full object-cover"
+          />
+          <AnimatePresence initial={false}>
+            {open && (
               <motion.span
-                key="close"
-                initial={{ rotate: -90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: 90, opacity: 0 }}
+                key="close-overlay"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
                 transition={{ duration: 0.16 }}
+                className="absolute inset-0 grid place-items-center bg-brand-navy/75 backdrop-blur-[1px]"
               >
                 <X size={22} />
-              </motion.span>
-            ) : (
-              <motion.span
-                key="chat"
-                initial={{ rotate: 90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: -90, opacity: 0 }}
-                transition={{ duration: 0.16 }}
-              >
-                <MessageSquareText size={22} />
               </motion.span>
             )}
           </AnimatePresence>
