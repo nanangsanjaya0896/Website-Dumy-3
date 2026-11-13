@@ -47,12 +47,13 @@ src/
 │   ├── ContactForm.jsx      # Formulir kontak dengan state pengiriman
 │   ├── ExperienceTimeline.jsx # Linimasa perjalanan perusahaan
 │   ├── BrandLogos.jsx       # Marquee merek AC yang dilayani
-│   └── WhatsAppFloat.jsx    # Tombol WhatsApp mengambang
+│   ├── WhatsAppFloat.jsx    # Tombol WhatsApp mengambang
+│   └── AIChatWidget.jsx     # Chat AI lokal (rule-based, tanpa API) di atas tombol WA
 ├── data/                # Sumber data (company, projects, services, stats,
 │                        #  socials, brands, faqs)
 ├── hooks/               # useScrollToTop, useCounter
 ├── layouts/
-│   └── MainLayout.jsx       # Aurora background + Header/Footer/WA float
+│   └── MainLayout.jsx       # Aurora background + Header/Footer/chat AI + WA float
 └── pages/               # HomePage, AboutPage, ProjectsPage,
                          # ProjectDetailPage, ServicesPage, ContactPage,
                          # NotFoundPage

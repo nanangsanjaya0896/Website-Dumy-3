@@ -2,6 +2,7 @@ import { Outlet } from "react-router";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import WhatsAppFloat from "../components/WhatsAppFloat";
+import AIChatWidget from "../components/AIChatWidget";
 
 function Aurora() {
   return (
@@ -25,6 +26,7 @@ export default function MainLayout() {
         <Outlet />
       </main>
       <Footer />
+      <AIChatWidget />
       <WhatsAppFloat />
     </div>
   );
