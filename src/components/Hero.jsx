@@ -52,7 +52,7 @@ export default function Hero() {
   }, [startTimeline]);
 
   return (
-    <section className="relative min-h-[100dvh] overflow-hidden">
+    <section className="relative z-10 min-h-[100dvh] overflow-hidden shadow-[0_28px_56px_-30px_rgb(12_37_69/0.55)]">
       <VideoBackground onVideoComplete={startTimeline} />
 
       <div className="relative z-10 mx-auto flex min-h-[100dvh] max-w-7xl items-center justify-center px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
