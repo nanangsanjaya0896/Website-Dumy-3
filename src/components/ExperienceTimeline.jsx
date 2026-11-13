@@ -22,11 +22,11 @@ export default function ExperienceTimeline() {
                   <span className="font-display text-2xl font-extrabold">
                     <span className="text-gradient">{milestone.year}</span>
                   </span>
-                  <h3 className="font-display text-lg font-extrabold tracking-tight text-brand-primary">
+                  <h3 className="display-card text-lg">
                     {milestone.title}
                   </h3>
                 </div>
-                <p className="mt-2.5 leading-relaxed font-medium text-brand-secondary">
+                <p className="mt-2.5 leading-relaxed text-brand-secondary">
                   {milestone.description}
                 </p>
               </div>

@@ -30,10 +30,10 @@ export default function StatCounter() {
     <section className="py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold tracking-[0.22em] text-brand-accent uppercase">
+          <p className="eyebrow">
             Jejak Sejukin
           </p>
-          <h2 className="mt-4 font-display text-3xl leading-[1.12] font-extrabold tracking-tight text-balance text-brand-primary md:text-5xl">
+          <h2 className="mt-4 display-section">
             Angka yang kami jaga setiap hari.
           </h2>
         </Reveal>

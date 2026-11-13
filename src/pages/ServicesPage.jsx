@@ -87,10 +87,10 @@ export default function ServicesPage() {
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-semibold tracking-[0.22em] text-brand-accent uppercase">
+            <p className="eyebrow">
               Semua layanan
             </p>
-            <h2 className="mt-4 font-display text-3xl leading-[1.12] font-extrabold tracking-tight text-balance text-brand-primary md:text-4xl">
+            <h2 className="mt-4 display-section-sm">
               Apa pun kebutuhan AC Anda, kami punya timnya.
             </h2>
           </Reveal>
@@ -109,7 +109,7 @@ export default function ServicesPage() {
                       {service.number}
                     </span>
                   </div>
-                  <h3 className="mt-5 font-display text-xl font-extrabold tracking-tight text-brand-primary">
+                  <h3 className="mt-5 display-card text-xl">
                     {service.title}
                   </h3>
                   <p className="mt-2.5 flex-1 text-sm leading-relaxed text-brand-secondary">
@@ -128,10 +128,10 @@ export default function ServicesPage() {
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-semibold tracking-[0.22em] text-brand-accent uppercase">
+            <p className="eyebrow">
               Cara kerja kami
             </p>
-            <h2 className="mt-4 font-display text-3xl leading-[1.12] font-extrabold tracking-tight text-balance text-brand-primary md:text-4xl">
+            <h2 className="mt-4 display-section-sm">
               Enam langkah, tanpa kejutan.
             </h2>
           </Reveal>
@@ -147,10 +147,10 @@ export default function ServicesPage() {
                     <span className="bg-primary-gradient relative z-10 mx-auto grid h-12 w-12 place-items-center rounded-full text-white shadow-md shadow-brand-accent/30 ring-4 ring-brand-bg">
                       <step.icon size={20} />
                     </span>
-                    <h3 className="mt-4 font-display font-extrabold tracking-tight text-brand-primary">
+                    <h3 className="mt-4 display-card">
                       {step.title}
                     </h3>
-                    <p className="mt-1.5 text-xs leading-relaxed font-medium text-brand-secondary">
+                    <p className="mt-1.5 text-xs leading-relaxed text-brand-secondary">
                       {step.description}
                     </p>
                   </div>
@@ -164,10 +164,10 @@ export default function ServicesPage() {
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-semibold tracking-[0.22em] text-brand-accent uppercase">
+            <p className="eyebrow">
               Detail & estimasi
             </p>
-            <h2 className="mt-4 font-display text-3xl leading-[1.12] font-extrabold tracking-tight text-balance text-brand-primary md:text-4xl">
+            <h2 className="mt-4 display-section-sm">
               Buka untuk melihat ruang lingkup tiap layanan.
             </h2>
           </Reveal>
@@ -180,10 +180,10 @@ export default function ServicesPage() {
       <section id="harga" className="scroll-mt-28 py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-semibold tracking-[0.22em] text-brand-accent uppercase">
+            <p className="eyebrow">
               Paket harga
             </p>
-            <h2 className="mt-4 font-display text-3xl leading-[1.12] font-extrabold tracking-tight text-balance text-brand-primary md:text-4xl">
+            <h2 className="mt-4 display-section-sm">
               Harga jelas sebelum teknisi berangkat.
             </h2>
           </Reveal>
@@ -221,10 +221,10 @@ export default function ServicesPage() {
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-semibold tracking-[0.22em] text-brand-accent uppercase">
+            <p className="eyebrow">
               Pertanyaan umum
             </p>
-            <h2 className="mt-4 font-display text-3xl leading-[1.12] font-extrabold tracking-tight text-balance text-brand-primary md:text-4xl">
+            <h2 className="mt-4 display-section-sm">
               Yang sering ditanyakan pelanggan.
             </h2>
           </Reveal>
@@ -242,7 +242,7 @@ export default function ServicesPage() {
 function PlanBody({ plan }) {
   return (
     <>
-      <h3 className="font-display text-lg font-extrabold tracking-wide text-brand-primary uppercase">
+      <h3 className="display-card text-lg tracking-wide uppercase">
         {plan.name}
       </h3>
       <div className="mt-4 flex items-baseline gap-2">
@@ -253,7 +253,7 @@ function PlanBody({ plan }) {
       <p className="mt-1 text-xs font-semibold tracking-wide text-brand-secondary uppercase">
         {plan.unit}
       </p>
-      <p className="mt-4 text-sm leading-relaxed font-medium text-brand-secondary">
+      <p className="mt-4 text-sm leading-relaxed text-brand-secondary">
         {plan.description}
       </p>
       <ul className="mt-6 flex-1 space-y-3 border-t border-hairline pt-6">

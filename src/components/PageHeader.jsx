@@ -16,7 +16,7 @@ export default function PageHeader({ label, title, description, children }) {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.08, ease: [0.32, 0.72, 0, 1] }}
-          className="mt-6 max-w-3xl font-display text-4xl leading-[1.08] font-extrabold tracking-tight text-balance text-brand-primary md:text-6xl"
+          className="mt-6 max-w-3xl display-page"
         >
           {title}
         </motion.h1>
@@ -25,7 +25,7 @@ export default function PageHeader({ label, title, description, children }) {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.16, ease: [0.32, 0.72, 0, 1] }}
-            className="mt-6 max-w-2xl text-lg leading-relaxed font-medium text-brand-secondary"
+            className="mt-6 max-w-2xl lead-lg"
           >
             {description}
           </motion.p>

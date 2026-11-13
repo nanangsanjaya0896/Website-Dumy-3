@@ -5,16 +5,16 @@ import { ArrowRight, ShieldCheck } from "lucide-react";
 export default function HeroContent() {
   return (
     <>
-      <div className="gsap-hero-eyebrow mb-6 inline-flex items-center space-x-3 rounded-full border border-white/50 bg-white/70 px-4 py-1.5 text-xs font-semibold tracking-wider text-brand-secondary shadow-sm backdrop-blur-md">
+      <div className="gsap-hero-eyebrow mb-6 inline-flex items-center space-x-3 rounded-full border border-white/50 bg-white/70 px-4 py-1.5 text-[11px] font-semibold tracking-[0.14em] text-brand-secondary shadow-sm backdrop-blur-md">
         <ShieldCheck size={14} className="text-brand-accent" />
         <span>TERPERCAYA • CEPAT • BERGARANSI</span>
       </div>
 
-      <h1 className="gsap-hero-heading mb-6 font-display text-6xl leading-[1.05] font-extrabold tracking-tight text-balance text-brand-primary md:text-[80px]">
+      <h1 className="gsap-hero-heading mb-6 display-hero">
         <span className="text-gradient">Sejukin</span> Ruangan Anda
       </h1>
 
-      <p className="gsap-hero-paragraph mb-6 max-w-md text-lg leading-relaxed font-medium text-brand-secondary md:text-xl">
+      <p className="gsap-hero-paragraph mb-6 max-w-md lead-lg">
         Jasa pemasangan, perawatan, dan perbaikan AC profesional dengan teknisi
         bersertifikat dan garansi resmi di seluruh Jabodetabek.
       </p>

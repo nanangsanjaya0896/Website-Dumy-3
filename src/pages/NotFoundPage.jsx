@@ -18,7 +18,7 @@ export default function NotFoundPage() {
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1, ease: [0.32, 0.72, 0, 1] }}
-        className="font-display text-2xl font-extrabold tracking-tight text-brand-primary md:text-3xl"
+        className="display-card text-2xl md:text-3xl"
       >
         Halaman tidak ditemukan
       </motion.h1>
@@ -26,7 +26,7 @@ export default function NotFoundPage() {
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.18, ease: [0.32, 0.72, 0, 1] }}
-        className="mt-4 max-w-md text-lg leading-relaxed font-medium text-brand-secondary"
+        className="mt-4 max-w-md lead"
       >
         Halaman yang Anda cari mungkin telah dipindahkan atau tidak tersedia.
       </motion.p>

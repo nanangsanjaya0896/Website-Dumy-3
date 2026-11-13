@@ -138,7 +138,7 @@ export default function ProjectDetailPage() {
                 <span className="rounded-full bg-white/15 px-4 py-1.5 text-xs font-semibold tracking-wider text-white uppercase backdrop-blur-md">
                   {project.category}
                 </span>
-                <h1 className="mt-4 max-w-3xl font-display text-3xl leading-[1.1] font-extrabold tracking-tight text-balance text-white md:text-5xl">
+                <h1 className="mt-4 max-w-3xl display-page text-white">
                   {project.title}
                 </h1>
                 <p className="mt-3 text-sm font-medium text-white/75">
@@ -159,7 +159,7 @@ export default function ProjectDetailPage() {
                     <p className="text-[11px] font-semibold tracking-wider text-brand-secondary uppercase">
                       {meta.label}
                     </p>
-                    <p className="truncate font-display font-extrabold text-brand-primary">
+                    <p className="truncate display-card">
                       {meta.key === "numberOfUnits"
                         ? `${project[meta.key]} unit`
                         : project[meta.key]}
@@ -172,22 +172,22 @@ export default function ProjectDetailPage() {
 
           <div className="grid gap-14 py-16 md:py-24 lg:grid-cols-12">
             <Reveal className="lg:col-span-5">
-              <p className="text-xs font-semibold tracking-[0.22em] text-brand-accent uppercase">
+              <p className="eyebrow">
                 Gambaran proyek
               </p>
-              <h2 className="mt-4 font-display text-3xl leading-[1.12] font-extrabold tracking-tight text-balance text-brand-primary md:text-4xl">
+              <h2 className="mt-4 display-section-sm">
                 Cerita di balik instalasi ini.
               </h2>
             </Reveal>
             <Reveal className="lg:col-span-7" delay={0.1}>
-              <p className="max-w-[62ch] text-lg leading-relaxed font-medium text-brand-secondary">
+              <p className="max-w-[62ch] lead">
                 {project.overview}
               </p>
             </Reveal>
           </div>
 
           <Reveal>
-            <h2 className="font-display text-3xl leading-[1.12] font-extrabold tracking-tight text-balance text-brand-primary md:text-4xl">
+            <h2 className="display-section-sm">
               Dokumentasi pengerjaan.
             </h2>
           </Reveal>
@@ -219,10 +219,10 @@ export default function ProjectDetailPage() {
 
           <div className="py-16 md:py-24">
             <Reveal>
-              <p className="text-xs font-semibold tracking-[0.22em] text-brand-accent uppercase">
+              <p className="eyebrow">
                 Tahapan kerja
               </p>
-              <h2 className="mt-4 font-display text-3xl leading-[1.12] font-extrabold tracking-tight text-balance text-brand-primary md:text-4xl">
+              <h2 className="mt-4 display-section-sm">
                 Proses yang kami jalani.
               </h2>
             </Reveal>
@@ -233,10 +233,10 @@ export default function ProjectDetailPage() {
                     <p className="font-display text-4xl font-extrabold tracking-tight">
                       <span className="text-gradient">{step.step}</span>
                     </p>
-                    <h3 className="mt-4 font-display text-lg font-extrabold tracking-tight text-brand-primary">
+                    <h3 className="mt-4 display-card text-lg">
                       {step.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed font-medium text-brand-secondary">
+                    <p className="mt-2 text-sm leading-relaxed text-brand-secondary">
                       {step.description}
                     </p>
                   </div>
@@ -246,7 +246,7 @@ export default function ProjectDetailPage() {
           </div>
 
           <Reveal>
-            <h2 className="font-display text-3xl leading-[1.12] font-extrabold tracking-tight text-balance text-brand-primary md:text-4xl">
+            <h2 className="display-section-sm">
               Hasil yang terukur.
             </h2>
           </Reveal>
@@ -280,7 +280,7 @@ export default function ProjectDetailPage() {
                     — {project.testimonial.role}
                   </span>
                 </p>
-                <p className="mt-6 max-w-3xl leading-relaxed font-medium text-brand-secondary">
+                <p className="mt-6 max-w-3xl leading-relaxed text-brand-secondary">
                   {project.results}
                 </p>
               </div>
@@ -303,7 +303,7 @@ export default function ProjectDetailPage() {
                 <span className="block text-xs font-semibold tracking-wider text-brand-secondary uppercase">
                   Proyek berikutnya
                 </span>
-                <span className="block max-w-[16rem] truncate font-display font-extrabold text-brand-primary transition-colors group-hover:text-brand-accent">
+                <span className="block max-w-[16rem] truncate display-card transition-colors group-hover:text-brand-accent">
                   {nextProject.title}
                 </span>
               </span>

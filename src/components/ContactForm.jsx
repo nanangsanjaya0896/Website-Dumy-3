@@ -61,10 +61,10 @@ export default function ContactForm() {
       className="glass relative overflow-hidden rounded-[28px] p-7 shadow-soft sm:p-10"
       aria-label="Formulir permintaan layanan Sejukin"
     >
-      <h2 className="font-display text-2xl font-extrabold tracking-tight text-brand-primary">
+      <h2 className="display-card text-2xl">
         Kirim permintaan layanan
       </h2>
-      <p className="mt-2 text-sm leading-relaxed font-medium text-brand-secondary">
+      <p className="mt-2 text-sm leading-relaxed text-brand-secondary">
         Isi detail di bawah — {company.responseTime.toLowerCase()} pada jam
         kerja.
       </p>

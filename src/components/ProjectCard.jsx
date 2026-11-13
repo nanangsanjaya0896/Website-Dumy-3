@@ -36,7 +36,7 @@ export default function ProjectCard({ project }) {
             <span className="h-1 w-1 rounded-full bg-brand-secondary/50" />
             <span>{project.year}</span>
           </div>
-          <h3 className="mt-3 line-clamp-2 font-display text-xl leading-snug font-extrabold text-brand-primary transition-colors group-hover:text-brand-accent">
+          <h3 className="mt-3 line-clamp-2 display-card text-xl transition-colors group-hover:text-brand-accent">
             {project.title}
           </h3>
           <p className="mt-2.5 line-clamp-2 text-sm leading-relaxed text-brand-secondary">

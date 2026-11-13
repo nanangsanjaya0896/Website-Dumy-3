@@ -16,14 +16,14 @@ export default function ContactCTA() {
                 className="pointer-events-none absolute -top-24 left-1/2 h-72 w-[36rem] -translate-x-1/2 rounded-full bg-brand-accent/10 blur-[80px]"
               />
               <motion.div whileHover={{ y: -2 }} className="relative inline-block">
-                <p className="text-xs font-semibold tracking-[0.22em] text-brand-accent uppercase">
+                <p className="eyebrow">
                   {company.status}
                 </p>
               </motion.div>
-              <h2 className="relative mt-5 font-display text-3xl leading-[1.12] font-extrabold tracking-tight text-balance text-brand-primary md:text-5xl">
+              <h2 className="relative mt-5 display-section">
                 Siap bikin ruangan Anda sejuk lagi?
               </h2>
-              <p className="relative mx-auto mt-5 max-w-xl text-lg leading-relaxed font-medium text-brand-secondary">
+              <p className="relative mx-auto mt-5 max-w-xl lead-lg">
                 Ceritakan kebutuhan AC Anda — tim kami{" "}
                 {company.responseTime.toLowerCase()} pada jam kerja, dengan
                 estimasi harga yang jelas sebelum pengerjaan.

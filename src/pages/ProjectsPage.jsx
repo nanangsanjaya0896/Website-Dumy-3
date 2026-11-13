@@ -40,13 +40,13 @@ function FeaturedStack() {
                   transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
                   className="glass rounded-[28px] p-7 shadow-soft sm:p-8"
                 >
-                  <p className="text-xs font-semibold tracking-[0.22em] text-brand-accent uppercase">
+                  <p className="eyebrow">
                     {active.category}
                   </p>
-                  <h2 className="mt-3 font-display text-3xl leading-tight font-extrabold tracking-tight text-brand-primary">
+                  <h2 className="mt-3 display-section-sm">
                     {active.title}
                   </h2>
-                  <p className="mt-4 leading-relaxed font-medium text-brand-secondary">
+                  <p className="mt-4 leading-relaxed text-brand-secondary">
                     {active.description}
                   </p>
                   <div className="mt-5 flex flex-wrap gap-2">
@@ -61,7 +61,7 @@ function FeaturedStack() {
                   </div>
                   <div className="mt-6 grid grid-cols-3 gap-3 border-t border-hairline pt-5 text-center">
                     <div>
-                      <p className="font-display text-lg font-extrabold text-brand-primary">
+                      <p className="display-card text-lg">
                         {active.numberOfUnits}
                       </p>
                       <p className="text-[11px] font-semibold text-brand-secondary uppercase tracking-wide">
@@ -69,7 +69,7 @@ function FeaturedStack() {
                       </p>
                     </div>
                     <div>
-                      <p className="font-display text-lg font-extrabold text-brand-primary">
+                      <p className="display-card text-lg">
                         {active.year}
                       </p>
                       <p className="text-[11px] font-semibold text-brand-secondary uppercase tracking-wide">
@@ -77,7 +77,7 @@ function FeaturedStack() {
                       </p>
                     </div>
                     <div>
-                      <p className="font-display text-lg font-extrabold text-brand-primary">
+                      <p className="display-card text-lg">
                         90 hr
                       </p>
                       <p className="text-[11px] font-semibold text-brand-secondary uppercase tracking-wide">
@@ -147,7 +147,7 @@ export default function ProjectsPage() {
           <Reveal>
             <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
               <div>
-                <h2 className="font-display text-3xl leading-[1.12] font-extrabold tracking-tight text-balance text-brand-primary md:text-4xl">
+                <h2 className="display-section-sm">
                   Jelajahi semua proyek.
                 </h2>
                 <p className="mt-3 max-w-md font-medium text-brand-secondary">

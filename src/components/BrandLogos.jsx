@@ -6,7 +6,7 @@ export default function BrandLogos() {
 
   return (
     <section className="border-y border-hairline bg-white/40 py-10 backdrop-blur-sm">
-      <p className="mb-7 px-4 text-center text-xs font-semibold tracking-[0.22em] text-brand-secondary uppercase">
+      <p className="mb-7 px-4 text-center eyebrow text-brand-secondary">
         Melayani semua merek AC utama
       </p>
       <div

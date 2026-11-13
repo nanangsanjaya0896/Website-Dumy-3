@@ -61,7 +61,7 @@ export default function Footer() {
                 <Snowflake className="h-7 w-7 text-brand-accent-2" strokeWidth={2} fill="rgba(56, 189, 248, 0.2)" />
                 <span className="font-display text-xl font-bold tracking-wide">SEJUKIN</span>
               </div>
-              <h2 className="mt-6 max-w-md font-display text-4xl leading-[1.12] font-extrabold tracking-tight text-balance">
+              <h2 className="mt-6 max-w-md display-section-sm">
                 Udara sejuk, ruangan nyaman — mulai dari{" "}
                 <span className="text-gradient">Sejukin</span>.
               </h2>
@@ -158,7 +158,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-brand-secondary sm:flex-row">
+          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-white/50 sm:flex-row">
             <p className="text-white/50">© 2025 Sejukin. All rights reserved.</p>
             <div className="flex gap-6">
               <Link to="/privacy" className="focus-ring text-white/50 transition-colors hover:text-white/80">

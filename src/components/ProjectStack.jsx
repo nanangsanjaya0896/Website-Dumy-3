@@ -82,7 +82,7 @@ export default function ProjectStack({
                 <span className="rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold tracking-wider text-white/90 uppercase backdrop-blur-md">
                   {item.category}
                 </span>
-                <h3 className="mt-3 line-clamp-2 font-display text-xl leading-snug font-extrabold text-white md:text-2xl">
+                <h3 className="mt-3 line-clamp-2 display-card text-xl text-white md:text-2xl">
                   {item.title}
                 </h3>
                 <p className="mt-2 text-xs font-medium text-white/70">

@@ -9,13 +9,13 @@ export default function AboutPreview() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
           <Reveal className="lg:col-span-6">
-            <p className="text-xs font-semibold tracking-[0.22em] text-brand-accent uppercase">
+            <p className="eyebrow">
               Tentang Sejukin
             </p>
-            <h2 className="mt-4 font-display text-3xl leading-[1.12] font-extrabold tracking-tight text-balance text-brand-primary md:text-5xl">
+            <h2 className="mt-4 display-section">
               Sejak 2015, menghadirkan udara sejuk untuk ribuan ruangan.
             </h2>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed font-medium text-brand-secondary">
+            <p className="mt-6 max-w-xl lead-lg">
               Sejukin lahir dari kegelisahan sederhana: terlalu banyak jasa AC
               yang datang terlambat, bekerja asal-asalan, dan menagih lebih di
               akhir. Kami membangun tim yang kebalikannya — teknisi

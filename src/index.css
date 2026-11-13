@@ -2,8 +2,8 @@
 
 @theme {
   --color-brand-bg: #f0f7fa;
-  --color-brand-primary: #0f1e2d;
-  --color-brand-secondary: #5a7a8a;
+  --color-brand-primary: #0c2231;
+  --color-brand-secondary: #3d5b6a;
   --color-brand-accent: #0e86d4;
   --color-brand-accent-2: #38bdf8;
   --color-brand-mint: #6dd5c8;
@@ -68,6 +68,85 @@ body {
 
 ::selection {
   background: rgb(14 134 212 / 0.2);
+}
+
+/* ---------- Typography scale ---------- */
+
+@layer components {
+  /* Headlines — Outfit, tight tracking, fluid size */
+  .display-hero,
+  .display-page,
+  .display-section,
+  .display-section-sm {
+    font-family: var(--font-display);
+    font-weight: 800;
+    color: var(--color-brand-primary);
+    text-wrap: balance;
+    font-kerning: normal;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  .display-hero {
+    font-size: clamp(2.375rem, 8vw, 5rem);
+    line-height: 1.02;
+    letter-spacing: -0.032em;
+  }
+
+  .display-page {
+    font-size: clamp(2rem, 5.2vw, 3.5rem);
+    line-height: 1.06;
+    letter-spacing: -0.028em;
+  }
+
+  .display-section {
+    font-size: clamp(1.75rem, 3.6vw, 3rem);
+    line-height: 1.12;
+    letter-spacing: -0.026em;
+  }
+
+  .display-section-sm {
+    font-size: clamp(1.625rem, 3vw, 2.5rem);
+    line-height: 1.14;
+    letter-spacing: -0.024em;
+  }
+
+  .display-card {
+    font-family: var(--font-display);
+    font-weight: 800;
+    color: var(--color-brand-primary);
+    line-height: 1.25;
+    letter-spacing: -0.014em;
+    text-wrap: balance;
+  }
+
+  /* Sub-headline / lead paragraph */
+  .lead,
+  .lead-lg {
+    color: var(--color-brand-secondary);
+    font-weight: 400;
+    text-wrap: pretty;
+    letter-spacing: -0.005em;
+  }
+
+  .lead {
+    font-size: clamp(1rem, 1vw, 1.0625rem);
+    line-height: 1.72;
+  }
+
+  .lead-lg {
+    font-size: clamp(1.0625rem, 1.25vw, 1.1875rem);
+    line-height: 1.68;
+  }
+
+  /* Small uppercase label above a headline */
+  .eyebrow {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-brand-accent);
+  }
 }
 
 /* ---------- Semantic helpers ---------- */

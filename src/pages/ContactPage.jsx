@@ -89,7 +89,7 @@ export default function ContactPage() {
                       <span className="block text-xs font-semibold tracking-wider text-brand-secondary uppercase">
                         {channel.label}
                       </span>
-                      <span className="mt-0.5 block font-display font-extrabold text-brand-primary transition-colors group-hover:text-brand-accent">
+                      <span className="mt-0.5 block display-card transition-colors group-hover:text-brand-accent">
                         {channel.value}
                       </span>
                     </span>

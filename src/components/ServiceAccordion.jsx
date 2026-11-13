@@ -30,7 +30,7 @@ export default function ServiceAccordion() {
               >
                 {service.number}
               </span>
-              <span className="flex-1 font-display text-lg font-extrabold tracking-tight text-brand-primary sm:text-xl">
+              <span className="flex-1 display-card text-lg sm:text-xl">
                 {service.title}
               </span>
               <motion.span
@@ -59,7 +59,7 @@ export default function ServiceAccordion() {
                   className="overflow-hidden"
                 >
                   <div className="px-6 pb-7 sm:px-8">
-                    <p className="max-w-2xl leading-relaxed font-medium text-brand-secondary">
+                    <p className="max-w-2xl leading-relaxed text-brand-secondary">
                       {service.description}
                     </p>
                     <ul className="mt-5 grid gap-2.5 sm:grid-cols-2">

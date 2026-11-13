@@ -11,13 +11,13 @@ export default function ProjectsPreview() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
         <div className="grid items-center gap-14 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
-            <p className="text-xs font-semibold tracking-[0.22em] text-brand-accent uppercase">
+            <p className="eyebrow">
               Portofolio unggulan
             </p>
-            <h2 className="mt-4 font-display text-3xl leading-[1.12] font-extrabold tracking-tight text-balance text-brand-primary md:text-5xl">
+            <h2 className="mt-4 display-section">
               Proyek yang bisa Anda lihat dan rasakan.
             </h2>
-            <p className="mt-6 max-w-md text-lg leading-relaxed font-medium text-brand-secondary">
+            <p className="mt-6 max-w-md lead-lg">
               Dari rumah mewah hingga gudang logistik — setiap instalasi kami
               dokumentasikan dengan perencanaan matang dan pengerjaan presisi.
               Geser tumpukan kartu untuk menjelajah.

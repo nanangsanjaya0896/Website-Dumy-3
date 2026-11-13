@@ -22,7 +22,7 @@ export default function FAQAccordion() {
               aria-controls={`faq-panel-${index}`}
               className="focus-ring flex w-full items-center justify-between gap-4 px-6 py-5 text-left sm:px-8"
             >
-              <span className="font-display text-base font-extrabold tracking-tight text-brand-primary sm:text-lg">
+              <span className="display-card text-base sm:text-lg">
                 {faq.question}
               </span>
               <motion.span
@@ -49,7 +49,7 @@ export default function FAQAccordion() {
                   transition={{ duration: 0.32, ease: [0.32, 0.72, 0, 1] }}
                   className="overflow-hidden"
                 >
-                  <p className="px-6 pb-6 leading-relaxed font-medium text-brand-secondary sm:px-8">
+                  <p className="px-6 pb-6 leading-relaxed text-brand-secondary sm:px-8">
                     {faq.answer}
                   </p>
                 </motion.div>

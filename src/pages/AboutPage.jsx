@@ -47,13 +47,13 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
           <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
             <Reveal className="lg:col-span-7">
-              <p className="text-xs font-semibold tracking-[0.22em] text-brand-accent uppercase">
+              <p className="eyebrow">
                 Cerita kami
               </p>
-              <h2 className="mt-4 font-display text-3xl leading-[1.12] font-extrabold tracking-tight text-balance text-brand-primary md:text-4xl">
+              <h2 className="mt-4 display-section-sm">
                 Berawal dari tiga teknisi dan satu kekesalan yang sama.
               </h2>
-              <div className="mt-6 space-y-5 text-lg leading-relaxed font-medium text-brand-secondary">
+              <div className="mt-6 space-y-5 lead">
                 <p>
                   Tahun 2015, pendiri Sejukin berulang kali mendengar keluhan
                   yang sama dari tetangganya: teknisi AC datang telat, bekerja
@@ -71,7 +71,7 @@ export default function AboutPage() {
               <ul className="mt-8 grid gap-4 sm:grid-cols-2">
                 {values.map((value) => (
                   <li key={value.title} className="glass rounded-2xl px-5 py-4">
-                    <p className="font-display font-extrabold text-brand-primary">
+                    <p className="display-card">
                       {value.title}
                     </p>
                     <p className="mt-1 text-sm leading-relaxed text-brand-secondary">
@@ -101,10 +101,10 @@ export default function AboutPage() {
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-semibold tracking-[0.22em] text-brand-accent uppercase">
+            <p className="eyebrow">
               Kenapa memilih Sejukin
             </p>
-            <h2 className="mt-4 font-display text-3xl leading-[1.12] font-extrabold tracking-tight text-balance text-brand-primary md:text-5xl">
+            <h2 className="mt-4 display-section">
               Empat hal yang tidak pernah kami tawar.
             </h2>
           </Reveal>
@@ -118,7 +118,7 @@ export default function AboutPage() {
                   <span className="bg-primary-gradient grid h-12 w-12 place-items-center rounded-2xl text-white shadow-md shadow-brand-accent/30">
                     <reason.icon size={22} />
                   </span>
-                  <h3 className="mt-5 font-display text-lg font-extrabold tracking-tight text-brand-primary">
+                  <h3 className="mt-5 display-card text-lg">
                     {reason.title}
                   </h3>
                   <p className="mt-2.5 text-sm leading-relaxed text-brand-secondary">
@@ -135,13 +135,13 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
           <div className="grid gap-14 lg:grid-cols-12">
             <Reveal className="lg:col-span-4">
-              <p className="text-xs font-semibold tracking-[0.22em] text-brand-accent uppercase">
+              <p className="eyebrow">
                 Perjalanan kami
               </p>
-              <h2 className="mt-4 font-display text-3xl leading-[1.12] font-extrabold tracking-tight text-balance text-brand-primary md:text-4xl">
+              <h2 className="mt-4 display-section-sm">
                 Satu dekade tumbuh bersama pelanggan.
               </h2>
-              <p className="mt-5 leading-relaxed font-medium text-brand-secondary">
+              <p className="mt-5 leading-relaxed text-brand-secondary">
                 Setiap milestone dicapai berkat kepercayaan yang kami jaga satu
                 per satu — dari servis pertama hingga kontrak korporat.
               </p>
