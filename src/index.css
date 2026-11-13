@@ -4,16 +4,16 @@
   --color-brand-bg: #f0f7fa;
   --color-brand-primary: #0c2231;
   --color-brand-navy: #0b2545;
-  --color-brand-ink: #14212b;
-  --color-brand-secondary: #4a5c69;
+  --color-brand-ink: #0a1628;
+  --color-brand-secondary: #4a5568;
   --color-brand-accent: #0e86d4;
   --color-brand-accent-2: #38bdf8;
   --color-brand-accent-ink: #0b5c8a;
   --color-brand-mint: #6dd5c8;
   --color-hairline: rgb(15 30 45 / 0.1);
 
-  --font-sans: "Inter", system-ui, sans-serif;
-  --font-display: "Outfit", "Inter", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
 
   --shadow-soft: 0 24px 60px -32px rgb(15 30 45 / 0.35);
 

@@ -95,7 +95,8 @@ tracking, dan warna headline tidak lagi ditulis ulang di tiap komponen.
 | `.lead`          | Paragraf pembuka / isi panjang                    | 16px → 17px             |
 | `.eyebrow`       | Label kecil di atas headline                      | 11px, tracking 0.18em   |
 
-- Font: **Outfit** (headline, weight 800, tracking −0.024em s.d. −0.032em) dan **Inter** (teks isi).
+- Font: **Plus Jakarta Sans** untuk headline & teks isi (mengikuti referensi ARKTIS Home Service).
+  Headline weight 800 dengan tracking −0.024em s.d. −0.032em.
 - Warna teks: headline `brand-ink #14212B`, sub-headline & isi `brand-secondary #4A5C69`
   (kontras 15.1:1 dan 6.4:1 di atas `brand-bg`, lolos WCAG AA/AAA).
 - Label aksen kecil memakai `brand-accent-ink #0B5C8A` (6.7:1); `brand-accent #0E86D4`
