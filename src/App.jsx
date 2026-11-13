@@ -15,7 +15,11 @@ const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
 function RouteLoader() {
   return (
-    <div className="flex min-h-[70vh] items-center justify-center" role="status" aria-label="Memuat halaman">
+    <div
+      className="flex min-h-[70vh] items-center justify-center"
+      role="status"
+      aria-label="Memuat halaman"
+    >
       <div className="h-10 w-10 animate-spin rounded-full border-2 border-hairline border-t-brand-accent" />
     </div>
   );

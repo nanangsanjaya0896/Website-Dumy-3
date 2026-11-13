@@ -11,7 +11,11 @@ const row = [...brands, ...brands];
 function BrandChip({ brand }) {
   return (
     <div className="glass flex items-center gap-2.5 rounded-full px-6 py-3 text-sm font-semibold whitespace-nowrap text-brand-primary/80 shadow-sm">
-      <Snowflake size={14} className="shrink-0 text-brand-accent" aria-hidden="true" />
+      <Snowflake
+        size={14}
+        className="shrink-0 text-brand-accent"
+        aria-hidden="true"
+      />
       {brand}
     </div>
   );
@@ -23,7 +27,9 @@ export default function BrandLogos() {
       <p className="eyebrow mb-7 px-4 text-center text-brand-secondary">
         Melayani semua merek AC utama
       </p>
+      <p className="sr-only">Merek yang dilayani: {brands.join(", ")}.</p>
       <div
+        aria-hidden="true"
         className="relative overflow-hidden"
         style={{
           maskImage:
@@ -32,13 +38,9 @@ export default function BrandLogos() {
             "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
         }}
       >
-        <div className="brand-marquee" aria-label="Merek AC yang dilayani">
+        <div className="brand-marquee">
           {[0, 1].map((group) => (
-            <div
-              key={group}
-              className="brand-marquee-group"
-              aria-hidden={group === 1 ? "true" : undefined}
-            >
+            <div key={group} className="brand-marquee-group">
               {row.map((brand, index) => (
                 <BrandChip key={`${brand}-${index}`} brand={brand} />
               ))}

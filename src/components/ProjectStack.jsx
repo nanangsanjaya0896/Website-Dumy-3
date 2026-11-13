@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { buildSrcSet, withWidth } from "../lib/img";
 
 export default function ProjectStack({
   items,
@@ -71,10 +72,15 @@ export default function ProjectStack({
               transition={{ type: "spring", stiffness: 240, damping: 28 }}
             >
               <img
-                src={item.image}
+                src={withWidth(item.image, 960)}
+                srcSet={buildSrcSet(item.image, [480, 960, 1440])}
+                sizes="(min-width: 1024px) 55vw, 92vw"
+                width={960}
+                height={720}
                 alt={item.title}
                 className="absolute inset-0 h-full w-full object-cover"
                 loading="lazy"
+                decoding="async"
                 draggable={false}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/85 via-brand-primary/25 to-transparent" />

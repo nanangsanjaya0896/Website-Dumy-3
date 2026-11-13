@@ -1,3 +1,19 @@
+/**
+ * SUMBER TUNGGAL DATA PERUSAHAAN
+ * ------------------------------
+ * Semua nomor telepon, email, jam kerja, dan area layanan di situs
+ * dibaca dari file ini (Footer, ContactCTA, WhatsAppFloat, AIChatWidget,
+ * halaman Kontak).
+ *
+ * ⚠️ NILAI DI BAWAH MASIH CONTOH — ganti sebelum situs dipakai komersial:
+ *    - phone / phoneHref / whatsapp / whatsappLink  (harus nomor sungguhan,
+ *      format internasional tanpa spasi untuk *Href dan *Link)
+ *    - email
+ *    - address (masih "Jakarta, Indonesia", belum ada alamat lengkap)
+ *
+ * JSON-LD di index.html memuat nomor & email yang sama; kalau berubah,
+ * perbarui juga blok <script type="application/ld+json"> di sana.
+ */
 export const company = {
   name: "Sejukin",
   tagline: "Sejukin ruangan, nyamankan hidup.",

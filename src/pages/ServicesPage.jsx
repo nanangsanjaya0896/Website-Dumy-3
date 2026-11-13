@@ -19,12 +19,36 @@ import ContactCTA from "../components/ContactCTA";
 import { services } from "../data/services";
 
 const processSteps = [
-  { icon: CalendarDays, title: "Booking", description: "Hubungi kami via WhatsApp atau formulir." },
-  { icon: Search, title: "Survei", description: "Teknisi cek lokasi & kalkulasi kebutuhan." },
-  { icon: FileText, title: "Estimasi", description: "Penawaran harga tertulis, tanpa biaya tersembunyi." },
-  { icon: Wrench, title: "Pengerjaan", description: "Dikerjakan rapi sesuai SOP pabrikan." },
-  { icon: Gauge, title: "Testing", description: "Uji suhu, tekanan freon, dan drain." },
-  { icon: BadgeCheck, title: "Serah Terima", description: "Garansi tertulis & edukasi perawatan." },
+  {
+    icon: CalendarDays,
+    title: "Booking",
+    description: "Hubungi kami via WhatsApp atau formulir.",
+  },
+  {
+    icon: Search,
+    title: "Survei",
+    description: "Teknisi cek lokasi & kalkulasi kebutuhan.",
+  },
+  {
+    icon: FileText,
+    title: "Estimasi",
+    description: "Penawaran harga tertulis, tanpa biaya tersembunyi.",
+  },
+  {
+    icon: Wrench,
+    title: "Pengerjaan",
+    description: "Dikerjakan rapi sesuai SOP pabrikan.",
+  },
+  {
+    icon: Gauge,
+    title: "Testing",
+    description: "Uji suhu, tekanan freon, dan drain.",
+  },
+  {
+    icon: BadgeCheck,
+    title: "Serah Terima",
+    description: "Garansi tertulis & edukasi perawatan.",
+  },
 ];
 
 const pricingPlans = [
@@ -87,9 +111,7 @@ export default function ServicesPage() {
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <p className="eyebrow">
-              Semua layanan
-            </p>
+            <p className="eyebrow">Semua layanan</p>
             <h2 className="mt-4 display-section-sm">
               Apa pun kebutuhan AC Anda, kami punya timnya.
             </h2>
@@ -109,9 +131,7 @@ export default function ServicesPage() {
                       {service.number}
                     </span>
                   </div>
-                  <h3 className="mt-5 display-card text-xl">
-                    {service.title}
-                  </h3>
+                  <h3 className="mt-5 display-card text-xl">{service.title}</h3>
                   <p className="mt-2.5 flex-1 text-sm leading-relaxed text-brand-secondary">
                     {service.description}
                   </p>
@@ -128,9 +148,7 @@ export default function ServicesPage() {
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <p className="eyebrow">
-              Cara kerja kami
-            </p>
+            <p className="eyebrow">Cara kerja kami</p>
             <h2 className="mt-4 display-section-sm">
               Enam langkah, tanpa kejutan.
             </h2>
@@ -147,9 +165,7 @@ export default function ServicesPage() {
                     <span className="bg-primary-gradient relative z-10 mx-auto grid h-12 w-12 place-items-center rounded-full text-white shadow-md shadow-brand-accent/30 ring-4 ring-brand-bg">
                       <step.icon size={20} />
                     </span>
-                    <h3 className="mt-4 display-card">
-                      {step.title}
-                    </h3>
+                    <h3 className="mt-4 display-card">{step.title}</h3>
                     <p className="mt-1.5 text-xs leading-relaxed text-brand-secondary">
                       {step.description}
                     </p>
@@ -164,9 +180,7 @@ export default function ServicesPage() {
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <p className="eyebrow">
-              Detail & estimasi
-            </p>
+            <p className="eyebrow">Detail & estimasi</p>
             <h2 className="mt-4 display-section-sm">
               Buka untuk melihat ruang lingkup tiap layanan.
             </h2>
@@ -180,9 +194,7 @@ export default function ServicesPage() {
       <section id="harga" className="scroll-mt-28 py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <p className="eyebrow">
-              Paket harga
-            </p>
+            <p className="eyebrow">Paket harga</p>
             <h2 className="mt-4 display-section-sm">
               Harga jelas sebelum teknisi berangkat.
             </h2>
@@ -221,9 +233,7 @@ export default function ServicesPage() {
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <p className="eyebrow">
-              Pertanyaan umum
-            </p>
+            <p className="eyebrow">Pertanyaan umum</p>
             <h2 className="mt-4 display-section-sm">
               Yang sering ditanyakan pelanggan.
             </h2>
@@ -246,7 +256,9 @@ function PlanBody({ plan }) {
         {plan.name}
       </h3>
       <div className="mt-4 flex items-baseline gap-2">
-        <span className={`font-display text-4xl font-extrabold tracking-tight ${plan.featured ? "text-gradient" : "text-brand-primary"}`}>
+        <span
+          className={`font-display text-4xl font-extrabold tracking-tight ${plan.featured ? "text-gradient" : "text-brand-primary"}`}
+        >
           {plan.price}
         </span>
       </div>
@@ -258,8 +270,14 @@ function PlanBody({ plan }) {
       </p>
       <ul className="mt-6 flex-1 space-y-3 border-t border-hairline pt-6">
         {plan.features.map((feature) => (
-          <li key={feature} className="flex items-start gap-2.5 text-sm font-medium text-brand-primary/85">
-            <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-brand-accent" />
+          <li
+            key={feature}
+            className="flex items-start gap-2.5 text-sm font-medium text-brand-primary/85"
+          >
+            <CheckCircle2
+              size={16}
+              className="mt-0.5 shrink-0 text-brand-accent"
+            />
             {feature}
           </li>
         ))}

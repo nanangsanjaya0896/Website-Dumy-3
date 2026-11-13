@@ -15,28 +15,28 @@ function CompanyCardSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
         <div className="grid items-center gap-14 lg:grid-cols-12">
           <Reveal className="lg:col-span-7">
-            <p className="eyebrow">
-              Sejukin dalam genggaman
-            </p>
+            <p className="eyebrow">Sejukin dalam genggaman</p>
             <h2 className="mt-4 max-w-xl display-section">
               Rapi, transparan, dan selalu bisa diandalkan.
             </h2>
             <p className="mt-6 max-w-lg lead">
               Setiap kunjungan teknisi kami membawa standar yang sama: datang
-              tepat waktu, harga sesuai estimasi, area kerja bersih kembali,
-              dan garansi tertulis di tangan Anda.
+              tepat waktu, harga sesuai estimasi, area kerja bersih kembali, dan
+              garansi tertulis di tangan Anda.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              {["Teknisi bersertifikat", "Garansi hingga 90 hari", "Estimasi harga di depan"].map(
-                (chip) => (
-                  <span
-                    key={chip}
-                    className="glass rounded-full px-5 py-2.5 text-sm font-semibold text-brand-primary/80"
-                  >
-                    {chip}
-                  </span>
-                ),
-              )}
+              {[
+                "Teknisi bersertifikat",
+                "Garansi hingga 90 hari",
+                "Estimasi harga di depan",
+              ].map((chip) => (
+                <span
+                  key={chip}
+                  className="glass rounded-full px-5 py-2.5 text-sm font-semibold text-brand-primary/80"
+                >
+                  {chip}
+                </span>
+              ))}
             </div>
           </Reveal>
           <Reveal className="lg:col-span-5" delay={0.12}>

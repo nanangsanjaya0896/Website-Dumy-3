@@ -68,7 +68,10 @@ export default function Header() {
             </span>
           </Link>
 
-          <nav className="hidden items-center space-x-10 lg:flex" aria-label="Navigasi utama">
+          <nav
+            className="hidden items-center space-x-10 lg:flex"
+            aria-label="Navigasi utama"
+          >
             {links.map((link) =>
               link.hash ? (
                 <Link
@@ -85,7 +88,9 @@ export default function Header() {
                   end={link.end}
                   className={({ isActive }) =>
                     `nav-link focus-ring text-sm font-medium transition-colors hover:text-brand-accent ${
-                      isActive ? "is-active text-brand-accent" : "text-brand-primary/80"
+                      isActive
+                        ? "is-active text-brand-accent"
+                        : "text-brand-primary/80"
                     }`
                   }
                 >

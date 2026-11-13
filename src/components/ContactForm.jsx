@@ -61,9 +61,7 @@ export default function ContactForm() {
       className="glass relative overflow-hidden rounded-[28px] p-7 shadow-soft sm:p-10"
       aria-label="Formulir permintaan layanan Sejukin"
     >
-      <h2 className="display-card text-2xl">
-        Kirim permintaan layanan
-      </h2>
+      <h2 className="display-card text-2xl">Kirim permintaan layanan</h2>
       <p className="mt-2 text-sm leading-relaxed text-brand-secondary">
         Isi detail di bawah — {company.responseTime.toLowerCase()} pada jam
         kerja.
@@ -178,7 +176,11 @@ export default function ContactForm() {
             className={inputClass}
           />
         </Field>
-        <Field label="Tanggal pengerjaan yang diinginkan" htmlFor="preferredDate" className="sm:col-span-2">
+        <Field
+          label="Tanggal pengerjaan yang diinginkan"
+          htmlFor="preferredDate"
+          className="sm:col-span-2"
+        >
           <input
             id="preferredDate"
             type="date"
@@ -187,7 +189,11 @@ export default function ContactForm() {
             className={inputClass}
           />
         </Field>
-        <Field label="Ceritakan kebutuhan Anda" htmlFor="message" className="sm:col-span-2">
+        <Field
+          label="Ceritakan kebutuhan Anda"
+          htmlFor="message"
+          className="sm:col-span-2"
+        >
           <textarea
             id="message"
             rows={4}

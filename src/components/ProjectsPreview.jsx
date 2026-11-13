@@ -11,9 +11,7 @@ export default function ProjectsPreview() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
         <div className="grid items-center gap-14 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
-            <p className="eyebrow">
-              Portofolio unggulan
-            </p>
+            <p className="eyebrow">Portofolio unggulan</p>
             <h2 className="mt-4 display-section">
               Proyek yang bisa Anda lihat dan rasakan.
             </h2>

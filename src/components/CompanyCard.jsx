@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from "motion/react";
+import { motion, useMotionValue, useReducedMotion } from "motion/react";
 import { Snowflake, Star, Clock4, AirVent } from "lucide-react";
 
 const miniStats = [
@@ -7,8 +7,40 @@ const miniStats = [
   { icon: Clock4, value: "24/7", label: "Siaga darurat" },
 ];
 
+const DRAG_LIMIT = 50;
+
 export default function CompanyCard({ className = "" }) {
   const reduce = useReducedMotion();
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  // Penggeseran lewat keyboard: panah menggeser kartu, sama seperti drag.
+  const onKeyDown = (event) => {
+    const step = 12;
+    const clamp = (value) => Math.max(-DRAG_LIMIT, Math.min(DRAG_LIMIT, value));
+    let handled = true;
+    switch (event.key) {
+      case "ArrowLeft":
+        x.set(clamp(x.get() - step));
+        break;
+      case "ArrowRight":
+        x.set(clamp(x.get() + step));
+        break;
+      case "ArrowUp":
+        y.set(clamp(y.get() - step));
+        break;
+      case "ArrowDown":
+        y.set(clamp(y.get() + step));
+        break;
+      case "Home":
+        x.set(0);
+        y.set(0);
+        break;
+      default:
+        handled = false;
+    }
+    if (handled) event.preventDefault();
+  };
 
   return (
     <motion.div
@@ -18,21 +50,35 @@ export default function CompanyCard({ className = "" }) {
     >
       <motion.div
         drag={reduce ? false : true}
-        dragConstraints={{ left: -50, right: 50, top: -50, bottom: 50 }}
+        dragConstraints={{
+          left: -DRAG_LIMIT,
+          right: DRAG_LIMIT,
+          top: -DRAG_LIMIT,
+          bottom: DRAG_LIMIT,
+        }}
         dragElastic={0.2}
+        dragMomentum={false}
         whileDrag={{ scale: 1.03, cursor: "grabbing" }}
-        className="h-96 w-72 cursor-grab touch-none"
-        aria-label="Kartu profil Sejukin — bisa digeser"
-        role="img"
+        style={{ x, y }}
+        onKeyDown={onKeyDown}
+        tabIndex={0}
+        className="focus-ring h-96 w-72 cursor-grab touch-none"
+        role="group"
+        aria-label="Kartu profil Sejukin. Gunakan tombol panah untuk menggeser kartu, atau seret dengan mouse."
       >
         <div className="gradient-border h-full">
           <div className="gradient-border-inner flex flex-col overflow-hidden">
             <div className="relative h-44 shrink-0 overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/38788452/pexels-photo-38788452.jpeg?auto=compress&cs=tinysrgb&w=900"
+                src="https://images.pexels.com/photos/38788452/pexels-photo-38788452.jpeg?auto=compress&cs=tinysrgb&w=576"
+                srcSet="https://images.pexels.com/photos/38788452/pexels-photo-38788452.jpeg?auto=compress&cs=tinysrgb&w=288 288w, https://images.pexels.com/photos/38788452/pexels-photo-38788452.jpeg?auto=compress&cs=tinysrgb&w=576 576w, https://images.pexels.com/photos/38788452/pexels-photo-38788452.jpeg?auto=compress&cs=tinysrgb&w=864 864w"
+                sizes="18rem"
+                width={576}
+                height={352}
                 alt="Unit AC split Sejukin terpasang rapi di dinding interior modern"
                 className="h-full w-full object-cover"
                 loading="lazy"
+                decoding="async"
                 draggable={false}
               />
               <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-brand-primary/55 to-transparent" />
@@ -62,7 +108,10 @@ export default function CompanyCard({ className = "" }) {
                     key={stat.label}
                     className="rounded-2xl border border-hairline bg-brand-bg/70 px-2 py-3 text-center"
                   >
-                    <stat.icon size={14} className="mx-auto text-brand-accent" />
+                    <stat.icon
+                      size={14}
+                      className="mx-auto text-brand-accent"
+                    />
                     <p className="mt-1.5 font-display text-sm font-extrabold text-brand-primary">
                       {stat.value}
                     </p>

@@ -15,10 +15,11 @@ export default function ContactCTA() {
                 aria-hidden="true"
                 className="pointer-events-none absolute -top-24 left-1/2 h-72 w-[36rem] -translate-x-1/2 rounded-full bg-brand-accent/10 blur-[80px]"
               />
-              <motion.div whileHover={{ y: -2 }} className="relative inline-block">
-                <p className="eyebrow">
-                  {company.status}
-                </p>
+              <motion.div
+                whileHover={{ y: -2 }}
+                className="relative inline-block"
+              >
+                <p className="eyebrow">{company.status}</p>
               </motion.div>
               <h2 className="relative mt-5 display-section">
                 Siap bikin ruangan Anda sejuk lagi?

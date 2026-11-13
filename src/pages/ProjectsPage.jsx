@@ -40,12 +40,8 @@ function FeaturedStack() {
                   transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
                   className="glass rounded-[28px] p-7 shadow-soft sm:p-8"
                 >
-                  <p className="eyebrow">
-                    {active.category}
-                  </p>
-                  <h2 className="mt-3 display-section-sm">
-                    {active.title}
-                  </h2>
+                  <p className="eyebrow">{active.category}</p>
+                  <h2 className="mt-3 display-section-sm">{active.title}</h2>
                   <p className="mt-4 leading-relaxed text-brand-secondary">
                     {active.description}
                   </p>
@@ -69,23 +65,23 @@ function FeaturedStack() {
                       </p>
                     </div>
                     <div>
-                      <p className="display-card text-lg">
-                        {active.year}
-                      </p>
+                      <p className="display-card text-lg">{active.year}</p>
                       <p className="text-[11px] font-semibold text-brand-secondary uppercase tracking-wide">
                         Tahun
                       </p>
                     </div>
                     <div>
-                      <p className="display-card text-lg">
-                        90 hr
-                      </p>
+                      <p className="display-card text-lg">90 hr</p>
                       <p className="text-[11px] font-semibold text-brand-secondary uppercase tracking-wide">
                         Garansi
                       </p>
                     </div>
                   </div>
-                  <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} className="mt-7">
+                  <motion.div
+                    whileHover={{ y: -2 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="mt-7"
+                  >
                     <Link
                       to={`/projects/${active.id}`}
                       className="focus-ring bg-primary-gradient flex w-full items-center justify-center gap-2 rounded-full py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-accent/25 transition-shadow hover:shadow-xl hover:shadow-brand-accent/30"
@@ -147,12 +143,12 @@ export default function ProjectsPage() {
           <Reveal>
             <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
               <div>
-                <h2 className="display-section-sm">
-                  Jelajahi semua proyek.
-                </h2>
+                <h2 className="display-section-sm">Jelajahi semua proyek.</h2>
                 <p className="mt-3 max-w-md font-medium text-brand-secondary">
                   {filtered.length} proyek dalam kategori{" "}
-                  <span className="font-semibold text-brand-accent">{filter}</span>
+                  <span className="font-semibold text-brand-accent">
+                    {filter}
+                  </span>
                 </p>
               </div>
               <ProjectFilter
@@ -163,7 +159,10 @@ export default function ProjectsPage() {
             </div>
           </Reveal>
 
-          <motion.div layout className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <motion.div
+            layout
+            className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+          >
             <AnimatePresence mode="popLayout">
               {filtered.map((project) => (
                 <ProjectCard key={project.id} project={project} />

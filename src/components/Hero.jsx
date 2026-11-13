@@ -19,7 +19,9 @@ export default function Hero() {
     if (started.current) return;
     started.current = true;
 
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     const all = [".gsap-header", ...HERO_TARGETS];
 
     if (reduce) {

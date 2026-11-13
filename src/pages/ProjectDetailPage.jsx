@@ -112,7 +112,9 @@ export default function ProjectDetailPage() {
 
   const navigateLightbox = (dir) =>
     setLightbox(
-      (prev) => (((prev + dir) % project.gallery.length) + project.gallery.length) % project.gallery.length,
+      (prev) =>
+        (((prev + dir) % project.gallery.length) + project.gallery.length) %
+        project.gallery.length,
     );
 
   return (
@@ -129,8 +131,14 @@ export default function ProjectDetailPage() {
             </Link>
             <div className="relative h-[65vh] min-h-[420px] overflow-hidden rounded-[28px] shadow-soft">
               <img
-                src={project.image}
+                src={withWidth(project.image, 1600)}
+                srcSet={buildSrcSet(project.image, [640, 960, 1280, 1920])}
+                sizes="100vw"
+                width={1600}
+                height={900}
                 alt={project.title}
+                fetchPriority="high"
+                decoding="async"
                 className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-primary via-brand-primary/35 to-transparent" />
@@ -172,24 +180,18 @@ export default function ProjectDetailPage() {
 
           <div className="grid gap-14 py-16 md:py-24 lg:grid-cols-12">
             <Reveal className="lg:col-span-5">
-              <p className="eyebrow">
-                Gambaran proyek
-              </p>
+              <p className="eyebrow">Gambaran proyek</p>
               <h2 className="mt-4 display-section-sm">
                 Cerita di balik instalasi ini.
               </h2>
             </Reveal>
             <Reveal className="lg:col-span-7" delay={0.1}>
-              <p className="max-w-[62ch] lead">
-                {project.overview}
-              </p>
+              <p className="max-w-[62ch] lead">{project.overview}</p>
             </Reveal>
           </div>
 
           <Reveal>
-            <h2 className="display-section-sm">
-              Dokumentasi pengerjaan.
-            </h2>
+            <h2 className="display-section-sm">Dokumentasi pengerjaan.</h2>
           </Reveal>
           <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4 md:grid-rows-2">
             {project.gallery.map((image, index) => (
@@ -219,9 +221,7 @@ export default function ProjectDetailPage() {
 
           <div className="py-16 md:py-24">
             <Reveal>
-              <p className="eyebrow">
-                Tahapan kerja
-              </p>
+              <p className="eyebrow">Tahapan kerja</p>
               <h2 className="mt-4 display-section-sm">
                 Proses yang kami jalani.
               </h2>
@@ -233,9 +233,7 @@ export default function ProjectDetailPage() {
                     <p className="font-display text-4xl font-extrabold tracking-tight">
                       <span className="text-gradient">{step.step}</span>
                     </p>
-                    <h3 className="mt-4 display-card text-lg">
-                      {step.title}
-                    </h3>
+                    <h3 className="mt-4 display-card text-lg">{step.title}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-brand-secondary">
                       {step.description}
                     </p>
@@ -246,9 +244,7 @@ export default function ProjectDetailPage() {
           </div>
 
           <Reveal>
-            <h2 className="display-section-sm">
-              Hasil yang terukur.
-            </h2>
+            <h2 className="display-section-sm">Hasil yang terukur.</h2>
           </Reveal>
           <div className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
             {project.metrics.map((metric, index) => (

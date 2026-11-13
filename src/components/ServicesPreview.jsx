@@ -11,9 +11,7 @@ export default function ServicesPreview() {
     <section className="py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="eyebrow">
-            Layanan utama
-          </p>
+          <p className="eyebrow">Layanan utama</p>
           <h2 className="mt-4 display-section">
             Satu tim untuk semua kebutuhan AC Anda.
           </h2>
@@ -33,9 +31,7 @@ export default function ServicesPreview() {
                 <span className="bg-primary-gradient grid h-12 w-12 place-items-center rounded-2xl text-white shadow-md shadow-brand-accent/30">
                   <service.icon size={22} />
                 </span>
-                <h3 className="mt-5 display-card text-lg">
-                  {service.title}
-                </h3>
+                <h3 className="mt-5 display-card text-lg">{service.title}</h3>
                 <p className="mt-2.5 flex-1 text-sm leading-relaxed text-brand-secondary">
                   {service.description}
                 </p>
@@ -53,7 +49,10 @@ export default function ServicesPreview() {
             className="focus-ring group inline-flex items-center gap-2 text-sm font-semibold text-brand-accent transition-colors hover:text-brand-primary"
           >
             Jelajahi semua layanan
-            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            <ArrowRight
+              size={16}
+              className="transition-transform group-hover:translate-x-1"
+            />
           </Link>
         </Reveal>
       </div>

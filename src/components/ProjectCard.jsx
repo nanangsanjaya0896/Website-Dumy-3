@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
+import { buildSrcSet, withWidth } from "../lib/img";
 
 export default function ProjectCard({ project }) {
   return (
@@ -20,10 +21,15 @@ export default function ProjectCard({ project }) {
       >
         <div className="relative aspect-[4/3] overflow-hidden">
           <img
-            src={project.image}
+            src={withWidth(project.image, 800)}
+            srcSet={buildSrcSet(project.image, [400, 800, 1200])}
+            sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
+            width={800}
+            height={600}
             alt={project.title}
             className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/30 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
           <span className="absolute top-4 left-4 rounded-full bg-white/85 px-3.5 py-1.5 text-[11px] font-semibold tracking-wider text-brand-primary uppercase backdrop-blur">

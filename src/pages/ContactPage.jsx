@@ -101,7 +101,10 @@ export default function ContactPage() {
                 <dl className="space-y-4">
                   {officeFacts.map((fact) => (
                     <div key={fact.label} className="flex items-start gap-3.5">
-                      <fact.icon size={17} className="mt-0.5 shrink-0 text-brand-accent" />
+                      <fact.icon
+                        size={17}
+                        className="mt-0.5 shrink-0 text-brand-accent"
+                      />
                       <div>
                         <dt className="text-xs font-semibold tracking-wider text-brand-secondary uppercase">
                           {fact.label}

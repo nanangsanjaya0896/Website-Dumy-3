@@ -6,6 +6,10 @@ import ExperienceTimeline from "../components/ExperienceTimeline";
 import StatCounter from "../components/StatCounter";
 import ContactCTA from "../components/ContactCTA";
 import { values } from "../data/company";
+import { buildSrcSet } from "../lib/img";
+
+const ABOUT_PAGE_IMG =
+  "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=960&auto=format&fit=crop";
 
 const reasons = [
   {
@@ -47,9 +51,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
           <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
             <Reveal className="lg:col-span-7">
-              <p className="eyebrow">
-                Cerita kami
-              </p>
+              <p className="eyebrow">Cerita kami</p>
               <h2 className="mt-4 display-section-sm">
                 Berawal dari tiga teknisi dan satu kekesalan yang sama.
               </h2>
@@ -71,9 +73,7 @@ export default function AboutPage() {
               <ul className="mt-8 grid gap-4 sm:grid-cols-2">
                 {values.map((value) => (
                   <li key={value.title} className="glass rounded-2xl px-5 py-4">
-                    <p className="display-card">
-                      {value.title}
-                    </p>
+                    <p className="display-card">{value.title}</p>
                     <p className="mt-1 text-sm leading-relaxed text-brand-secondary">
                       {value.description}
                     </p>
@@ -86,10 +86,15 @@ export default function AboutPage() {
               <div className="gradient-border">
                 <div className="gradient-border-inner overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1400&auto=format&fit=crop"
+                    src={ABOUT_PAGE_IMG}
+                    srcSet={buildSrcSet(ABOUT_PAGE_IMG, [480, 720, 960, 1440])}
+                    sizes="(min-width: 1024px) 38vw, 92vw"
+                    width={960}
+                    height={1200}
                     alt="Teknisi Sejukin memeriksa instalasi kelistrikan unit AC"
                     className="aspect-[4/5] w-full object-cover"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -101,9 +106,7 @@ export default function AboutPage() {
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
           <Reveal className="mx-auto max-w-2xl text-center">
-            <p className="eyebrow">
-              Kenapa memilih Sejukin
-            </p>
+            <p className="eyebrow">Kenapa memilih Sejukin</p>
             <h2 className="mt-4 display-section">
               Empat hal yang tidak pernah kami tawar.
             </h2>
@@ -118,9 +121,7 @@ export default function AboutPage() {
                   <span className="bg-primary-gradient grid h-12 w-12 place-items-center rounded-2xl text-white shadow-md shadow-brand-accent/30">
                     <reason.icon size={22} />
                   </span>
-                  <h3 className="mt-5 display-card text-lg">
-                    {reason.title}
-                  </h3>
+                  <h3 className="mt-5 display-card text-lg">{reason.title}</h3>
                   <p className="mt-2.5 text-sm leading-relaxed text-brand-secondary">
                     {reason.description}
                   </p>
@@ -135,9 +136,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
           <div className="grid gap-14 lg:grid-cols-12">
             <Reveal className="lg:col-span-4">
-              <p className="eyebrow">
-                Perjalanan kami
-              </p>
+              <p className="eyebrow">Perjalanan kami</p>
               <h2 className="mt-4 display-section-sm">
                 Satu dekade tumbuh bersama pelanggan.
               </h2>

@@ -30,7 +30,10 @@ export default function WhatsAppFloat() {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.94 }}
     >
-      <span className="wa-ping animate-wa-pulse absolute inset-0 rounded-full bg-[#25D366]" aria-hidden="true" />
+      <span
+        className="wa-ping animate-wa-pulse absolute inset-0 rounded-full bg-[#25D366]"
+        aria-hidden="true"
+      />
       <span
         className="relative grid h-14 w-14 place-items-center rounded-full text-white shadow-[0_8px_24px_-4px_rgb(37_211_102/0.5)] transition-shadow group-hover:shadow-[0_12px_32px_-4px_rgb(37_211_102/0.65)]"
         style={{

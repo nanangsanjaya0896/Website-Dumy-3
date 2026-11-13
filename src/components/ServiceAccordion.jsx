@@ -64,8 +64,14 @@ export default function ServiceAccordion() {
                     </p>
                     <ul className="mt-5 grid gap-2.5 sm:grid-cols-2">
                       {service.deliverables.map((item) => (
-                        <li key={item} className="flex items-start gap-2.5 text-sm text-brand-primary/85">
-                          <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-brand-accent" />
+                        <li
+                          key={item}
+                          className="flex items-start gap-2.5 text-sm text-brand-primary/85"
+                        >
+                          <CheckCircle2
+                            size={16}
+                            className="mt-0.5 shrink-0 text-brand-accent"
+                          />
                           {item}
                         </li>
                       ))}
@@ -84,7 +90,10 @@ export default function ServiceAccordion() {
                         className="focus-ring group ml-auto inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent transition-colors hover:text-brand-primary"
                       >
                         Booking layanan ini
-                        <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
+                        <ArrowRight
+                          size={15}
+                          className="transition-transform group-hover:translate-x-1"
+                        />
                       </Link>
                     </div>
                   </div>

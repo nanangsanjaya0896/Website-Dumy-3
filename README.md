@@ -109,3 +109,13 @@ tracking, dan warna headline tidak lagi ditulis ulang di tiap komponen.
 - Kartu memakai glassmorphism (`bg-white/60 backdrop-blur-xl border-hairline`) dan radius `28px`.
 - Aurora background bergerak lambat di luar hero dan otomatis berhenti saat `prefers-reduced-motion` aktif.
 - Timeline GSAP hero memiliki safety timeout agar konten tidak pernah tertinggal dalam keadaan tersembunyi.
+
+## SEO, share card & aksesibilitas (Paket A)
+
+- **OG / Twitter card**: `public/og-image.png` (1200×630, navy + aksen cyan) dipakai untuk preview saat link dibagikan di WhatsApp/Facebook/X. URL absolut di `index.html` mengarah ke `sejukin-psi.vercel.app` — kalau domain berubah, perbarui `og:url`, `og:image`, `twitter:image`, dan `canonical`.
+- **Structured data**: blok `HVACBusiness` JSON-LD di `index.html` (nama, telepon, email, area layanan, jam buka). Duplikat dari `src/data/company.js` — ubah keduanya saat data perusahaan berubah.
+- **Skip link**: "Lewati ke konten utama" di `MainLayout.jsx`, target `<main id="main">`.
+- **Gambar**: semua gambar pihak ketiga memakai `width`/`height` eksplisit + `srcSet` via `src/lib/img.js` (`buildSrcSet`, `withWidth`) untuk mencegah CLS.
+- **Kartu profil** (`CompanyCard`): bisa digeser dengan panah keyboard (Home = reset), semantik `role="group"`, bukan `role="img"`.
+- **Marquee merek**: dekoratif (`aria-hidden`), daftar merek disediakan sebagai teks `sr-only`.
+- **Data kontak**: lihat peringatan di kepala `src/data/company.js` — nomor/email masih contoh.

@@ -1,7 +1,11 @@
 import { Link } from "react-router";
 import { ArrowUpRight, BadgeCheck } from "lucide-react";
+import { buildSrcSet } from "../lib/img";
 import Reveal from "./Reveal";
 import { values } from "../data/company";
+
+const ABOUT_IMG =
+  "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=960&auto=format&fit=crop";
 
 export default function AboutPreview() {
   return (
@@ -9,9 +13,7 @@ export default function AboutPreview() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
           <Reveal className="lg:col-span-6">
-            <p className="eyebrow">
-              Tentang Sejukin
-            </p>
+            <p className="eyebrow">Tentang Sejukin</p>
             <h2 className="mt-4 display-section">
               Sejak 2015, menghadirkan udara sejuk untuk ribuan ruangan.
             </h2>
@@ -29,7 +31,9 @@ export default function AboutPreview() {
                     <BadgeCheck size={15} />
                   </span>
                   <div>
-                    <p className="font-semibold text-brand-primary">{value.title}</p>
+                    <p className="font-semibold text-brand-primary">
+                      {value.title}
+                    </p>
                     <p className="mt-0.5 text-sm leading-relaxed text-brand-secondary">
                       {value.description}
                     </p>
@@ -52,10 +56,15 @@ export default function AboutPreview() {
             <div className="gradient-border">
               <div className="gradient-border-inner overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1400&auto=format&fit=crop"
+                  src={ABOUT_IMG}
+                  srcSet={buildSrcSet(ABOUT_IMG, [480, 720, 960, 1440])}
+                  sizes="(min-width: 1024px) 45vw, 92vw"
+                  width={960}
+                  height={720}
                   alt="Tim teknisi Sejukin berdiskusi merencanakan jadwal pemasangan AC"
                   className="aspect-[4/3] w-full object-cover"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="flex items-center justify-between gap-4 border-t border-hairline bg-white/80 px-6 py-5">
                   <div>

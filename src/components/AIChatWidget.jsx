@@ -33,25 +33,87 @@ function buildReply(input) {
   if (has("freon", "isi ulang", "bocor")) {
     return `Untuk isi freon, teknisi mengecek dulu kebocoran dan tekanan sistem — karena isi ulang tanpa perbaikan kebocoran hanya bertahan sebentar. Biaya pengecekan mulai Rp 150.000, dan hasilnya kami jelaskan transparan sebelum pengerjaan.`;
   }
-  if (has("rusak", "mati", "tidak dingin", "gak dingin", "ga dingin", "error", "berisik", "menetes", "perbaikan", "troubleshoot")) {
+  if (
+    has(
+      "rusak",
+      "mati",
+      "tidak dingin",
+      "gak dingin",
+      "ga dingin",
+      "error",
+      "berisik",
+      "menetes",
+      "perbaikan",
+      "troubleshoot",
+    )
+  ) {
     return `Perbaikan & troubleshooting mulai Rp 150.000, mencakup 12 titik pemeriksaan: kebocoran freon, PCB, motor fan, sampai kompresor. Penggantian sparepart memakai part original dan bergaransi 90 hari.`;
   }
   if (has("garansi", "warranty")) {
-    return faqs.find((faq) => faq.question.toLowerCase().includes("garansi"))?.answer ?? "Semua pekerjaan bergaransi tertulis.";
+    return (
+      faqs.find((faq) => faq.question.toLowerCase().includes("garansi"))
+        ?.answer ?? "Semua pekerjaan bergaransi tertulis."
+    );
   }
-  if (has("area", "lokasi", "jangkauan", "jabodetabek", "mana saja", "jakarta", "bogor", "depok", "tangerang", "bekasi")) {
+  if (
+    has(
+      "area",
+      "lokasi",
+      "jangkauan",
+      "jabodetabek",
+      "mana saja",
+      "jakarta",
+      "bogor",
+      "depok",
+      "tangerang",
+      "bekasi",
+    )
+  ) {
     return `Kami melayani seluruh ${company.serviceArea}: Jakarta, Bogor, Depok, Tangerang, Tangerang Selatan, dan Bekasi, termasuk Cikarang & Cibubur. Di luar area itu? Bisa kami konsultasikan dulu.`;
   }
-  if (has("booking", "pesan", "jadwal", "order", "sekarang", "kapan", "hari ini", "besok")) {
+  if (
+    has(
+      "booking",
+      "pesan",
+      "jadwal",
+      "order",
+      "sekarang",
+      "kapan",
+      "hari ini",
+      "besok",
+    )
+  ) {
     return `Booking bisa lewat WhatsApp, telepon ${company.phone}, atau formulir di halaman Kontak. Tim kami biasanya merespons dalam ${company.responseTime.replace("Biasanya merespons dalam ", "")} pada jam kerja (${company.businessHours}).`;
   }
   if (has("darurat", "malam", "24 jam", "24/7", "libur", "urgent")) {
-    return faqs.find((faq) => faq.question.toLowerCase().includes("darurat"))?.answer ?? `Layanan darurat 24/7 tersedia untuk pelanggan kontrak.`;
+    return (
+      faqs.find((faq) => faq.question.toLowerCase().includes("darurat"))
+        ?.answer ?? `Layanan darurat 24/7 tersedia untuk pelanggan kontrak.`
+    );
   }
-  if (has("merek", "brand", "daikin", "panasonic", "lg", "samsung", "sharp", "gree", "midea", "haier", "mitsubishi")) {
-    return faqs.find((faq) => faq.question.toLowerCase().includes("merek"))?.answer ?? "Kami menangani semua merek utama AC.";
+  if (
+    has(
+      "merek",
+      "brand",
+      "daikin",
+      "panasonic",
+      "lg",
+      "samsung",
+      "sharp",
+      "gree",
+      "midea",
+      "haier",
+      "mitsubishi",
+    )
+  ) {
+    return (
+      faqs.find((faq) => faq.question.toLowerCase().includes("merek"))
+        ?.answer ?? "Kami menangani semua merek utama AC."
+    );
   }
-  if (has("bayar", "pembayaran", "transfer", "cicil", "tunai", "cash", "invoice")) {
+  if (
+    has("bayar", "pembayaran", "transfer", "cicil", "tunai", "cash", "invoice")
+  ) {
     return `Pembayaran bisa tunai atau transfer bank setelah pekerjaan selesai dan Anda cek hasilnya. Untuk proyek korporat, kami sediakan invoice resmi dan termin pembayaran.`;
   }
   if (has("lama", "durasi", "berapa jam", "waktu pengerjaan")) {
@@ -60,7 +122,18 @@ function buildReply(input) {
   if (has("promo", "diskon", "murah", "potongan")) {
     return `Untuk pelanggan kontrak perawatan rutin (minimal 3 unit), ada harga khusus per kunjungan. Sebutkan jumlah unit Anda, nanti kami hitungkan penawarannya.`;
   }
-  if (has("kontak", "telepon", "telpon", "email", "whatsapp", "wa", "hubungi", "admin")) {
+  if (
+    has(
+      "kontak",
+      "telepon",
+      "telpon",
+      "email",
+      "whatsapp",
+      "wa",
+      "hubungi",
+      "admin",
+    )
+  ) {
     return `Tim Sejukin bisa dihubungi di:\n• WhatsApp/Telepon: ${company.phone}\n• Email: ${company.email}\n• Jam kerja: ${company.businessHours}`;
   }
   if (has("terima kasih", "makasih", "thanks", "oke", "siap")) {
@@ -212,7 +285,11 @@ export default function AIChatWidget() {
                 >
                   {message.role === "bot" && (
                     <span className="mt-auto mr-2 h-7 w-7 shrink-0 overflow-hidden rounded-full ring-1 ring-hairline">
-                      <img src={robotLogo} alt="" className="h-full w-full object-cover" />
+                      <img
+                        src={robotLogo}
+                        alt=""
+                        className="h-full w-full object-cover"
+                      />
                     </span>
                   )}
                   <div
@@ -225,7 +302,9 @@ export default function AIChatWidget() {
                     {message.text.replace(/\*\*(.*?)\*\*/g, "$1")}
                     <span
                       className={`mt-1 block text-[10px] font-semibold ${
-                        message.role === "user" ? "text-white/70" : "text-brand-secondary/80"
+                        message.role === "user"
+                          ? "text-white/70"
+                          : "text-brand-secondary/80"
                       }`}
                     >
                       {message.time}
@@ -237,7 +316,11 @@ export default function AIChatWidget() {
               {typing && (
                 <div className="flex justify-start">
                   <span className="mt-auto mr-2 h-7 w-7 shrink-0 overflow-hidden rounded-full ring-1 ring-hairline">
-                    <img src={robotLogo} alt="" className="h-full w-full object-cover" />
+                    <img
+                      src={robotLogo}
+                      alt=""
+                      className="h-full w-full object-cover"
+                    />
                   </span>
                   <div className="flex items-center gap-1 rounded-2xl border border-hairline bg-white/85 px-3.5 py-3">
                     {[0, 1, 2].map((dot) => (
