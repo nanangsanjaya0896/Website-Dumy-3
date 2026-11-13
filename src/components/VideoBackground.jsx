@@ -47,11 +47,7 @@ export default function VideoBackground({ onVideoComplete }) {
         }}
       />
 
-      {/* Top blend into navigation */}
-      <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-brand-bg via-brand-bg/55 to-transparent" />
-      {/* Bottom blend into the next section */}
-      <div className="absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-b from-transparent to-brand-bg" />
-      {/* Soft lateral haze for text contrast */}
+      {/* Veil tipis merata agar teks tetap terbaca — tanpa gradasi putih di atas/bawah */}
       <div className="absolute inset-0 bg-brand-bg/10" />
     </div>
   );
