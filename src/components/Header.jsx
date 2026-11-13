@@ -59,9 +59,9 @@ export default function Header() {
             aria-label="Sejukin — kembali ke beranda"
           >
             <Snowflake
-              className="h-8 w-8 text-brand-accent"
+              className="h-8 w-8 text-brand-accent-ink"
               strokeWidth={2}
-              fill="rgba(14, 134, 212, 0.2)"
+              fill="rgba(91, 163, 217, 0.22)"
             />
             <span className="font-display text-2xl font-bold tracking-wide text-brand-primary">
               SEJUKIN

@@ -97,7 +97,7 @@ function SocialButton({ social }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={social.label}
-      className="focus-ring grid h-10 w-10 place-items-center rounded-full border border-white/10 text-white/60 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-accent-2/50 hover:bg-white/5 hover:text-white"
+      className="focus-ring grid h-10 w-10 place-items-center rounded-full border border-white/10 text-white/60 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-sky/50 hover:bg-white/5 hover:text-white"
     >
       {socialIcon(social.icon)}
     </a>
@@ -145,9 +145,9 @@ export default function Footer() {
               aria-label="Sejukin — kembali ke beranda"
             >
               <Snowflake
-                className="h-8 w-8 text-brand-accent-2"
+                className="h-8 w-8 text-brand-sky"
                 strokeWidth={2}
-                fill="rgba(56, 189, 248, 0.2)"
+                fill="rgba(91, 163, 217, 0.2)"
               />
               <span className="font-display text-xl font-bold tracking-wide text-white">
                 SEJUKIN
@@ -163,7 +163,7 @@ export default function Footer() {
             </p>
 
             <p className="mt-5 flex items-start gap-2 text-[12.5px] font-semibold text-white/45">
-              <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-accent-2" />
+              <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-sky" />
               {company.serviceArea}
             </p>
 
@@ -291,7 +291,7 @@ export default function Footer() {
       <button
         type="button"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="focus-ring group absolute top-8 right-6 grid h-11 w-11 place-items-center rounded-full border border-white/10 text-white/50 transition-all duration-300 hover:border-brand-accent-2 hover:bg-brand-accent-2 hover:text-white md:right-10"
+        className="focus-ring group absolute top-8 right-6 grid h-11 w-11 place-items-center rounded-full border border-white/10 text-white/50 transition-all duration-300 hover:border-brand-accent hover:bg-brand-accent hover:text-white md:right-10"
         aria-label="Kembali ke atas"
       >
         <ArrowUpRight className="h-4.5 w-4.5 transition-transform duration-300 group-hover:rotate-45" />

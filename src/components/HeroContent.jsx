@@ -32,7 +32,7 @@ export default function HeroContent() {
         <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
           <Link
             to="/projects"
-            className="focus-ring inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/80 px-8 py-4 font-semibold text-brand-primary backdrop-blur-md transition-colors hover:bg-white"
+            className="focus-ring inline-flex items-center gap-2 rounded-full border border-brand-accent-ink/40 bg-white/85 px-8 py-4 font-semibold text-brand-accent-ink backdrop-blur-md transition-colors hover:border-brand-accent-ink hover:bg-brand-ice"
           >
             Lihat Portofolio Proyek
           </Link>

@@ -6,7 +6,7 @@ export default function ExperienceTimeline() {
     <div className="relative">
       <div
         aria-hidden="true"
-        className="absolute top-2 bottom-2 left-[13px] w-px bg-gradient-to-b from-brand-accent via-brand-accent-2 to-brand-mint sm:left-[15px]"
+        className="absolute top-2 bottom-2 left-[13px] w-px bg-gradient-to-b from-brand-accent-ink via-brand-sky to-brand-mint sm:left-[15px]"
       />
       <div className="space-y-8">
         {milestones.map((milestone, index) => (

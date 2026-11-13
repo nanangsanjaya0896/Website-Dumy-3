@@ -97,7 +97,6 @@ tracking, dan warna headline tidak lagi ditulis ulang di tiap komponen.
 
 - Font: **Plus Jakarta Sans** untuk headline & teks isi (mengikuti referensi ARKTIS Home Service).
   Headline weight 800 dengan tracking −0.024em s.d. −0.032em.
-- Warna teks: headline `brand-ink #14212B`, sub-headline & isi `brand-secondary #4A5C69`
   (kontras 15.1:1 dan 6.4:1 di atas `brand-bg`, lolos WCAG AA/AAA).
 - Label aksen kecil memakai `brand-accent-ink #0B5C8A` (6.7:1); `brand-accent #0E86D4`
   hanya untuk isian/gradasi karena terlalu terang untuk teks kecil.
@@ -105,7 +104,24 @@ tracking, dan warna headline tidak lagi ditulis ulang di tiap komponen.
 
 ## Catatan Desain
 
-- Palet: `brand-bg #F0F7FA`, headline `#14212B`, teks isi `#4A5C69`, footer `brand-navy #0B2545`, aksen gradasi `#0B5C8A → #0E86D4`, mint `#6DD5C8`.
+- Palet mengikuti referensi **ARKTIS HOME SERVICE** (definisi di `@theme` `src/index.css`):
+  | Token | Hex | Peran |
+  |---|---|---|
+  | `brand-bg` | `#F8FAFB` (clean) | latar halaman |
+  | `brand-ink` / `brand-primary` | `#0A1628` (arctic) | headline & teks utama |
+  | `brand-secondary` | `#4A5568` (slatebody) | sub-headline & teks isi |
+  | `brand-accent` | `#E8720C` (flame) | CTA utama, fokus, aksen hangat |
+  | `brand-accent-2` | `#D66408` (flame gelap) | hover & ujung gradient CTA |
+  | `brand-accent-ink` | `#2E6DA4` (glacier) | eyebrow, tautan, aksen struktural |
+  | `brand-sky` | `#5BA3D9` (sky) | aksen dingin terang, logo footer |
+  | `brand-mint` | `#7BC8C0` (mint) | aksen dingin, ikon kontak |
+  | `brand-ice` | `#EEF6FF` (ice) | isian lembut |
+  | `brand-silver` | `#C8D8E8` (silver) | scrollbar, pemisah |
+  | `brand-navy` | `#1E2832` (coal) | footer & permukaan gelap |
+
+  Kontras: arctic/clean 17.3:1, slatebody/clean 7.2:1, glacier/clean 5.2:1, sky/coal 5.5:1.
+  Catatan: teks putih di atas flame = 3.1:1 (sama seperti referensi ARKTIS) — cukup untuk teks besar,
+  di bawah ambang AA untuk teks kecil. Ganti ke `text-brand-ink` bila butuh AA penuh.
 - Kartu memakai glassmorphism (`bg-white/60 backdrop-blur-xl border-hairline`) dan radius `28px`.
 - Aurora background bergerak lambat di luar hero dan otomatis berhenti saat `prefers-reduced-motion` aktif.
 - Timeline GSAP hero memiliki safety timeout agar konten tidak pernah tertinggal dalam keadaan tersembunyi.

@@ -1,21 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-bg: #f0f7fa;
-  --color-brand-primary: #0c2231;
-  --color-brand-navy: #0b2545;
-  --color-brand-ink: #0a1628;
-  --color-brand-secondary: #4a5568;
-  --color-brand-accent: #0e86d4;
-  --color-brand-accent-2: #38bdf8;
-  --color-brand-accent-ink: #0b5c8a;
-  --color-brand-mint: #6dd5c8;
-  --color-hairline: rgb(15 30 45 / 0.1);
+  /* Palet ARKTIS HOME SERVICE */
+  --color-brand-bg: #f8fafb; /* clean   — latar halaman */
+  --color-brand-primary: #0a1628; /* arctic  — teks utama */
+  --color-brand-navy: #1e2832; /* coal    — footer & surface gelap */
+  --color-brand-ink: #0a1628; /* arctic  — headline */
+  --color-brand-secondary: #4a5568; /* slatebody — teks isi */
+  --color-brand-accent: #e8720c; /* flame   — CTA utama */
+  --color-brand-accent-2: #d66408; /* flame gelap — hover & ujung gradient */
+  --color-brand-accent-ink: #2e6da4; /* glacier — eyebrow, tautan */
+  --color-brand-mint: #7bc8c0; /* mint    — aksen dingin */
+  --color-brand-sky: #5ba3d9; /* sky     — aksen dingin terang */
+  --color-brand-ice: #eef6ff; /* ice     — isian lembut */
+  --color-brand-silver: #c8d8e8; /* silver  — garis & pemisah */
+  --color-hairline: rgb(10 22 40 / 0.09);
 
   --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
   --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
 
-  --shadow-soft: 0 24px 60px -32px rgb(15 30 45 / 0.35);
+  --shadow-soft: 0 24px 60px -32px rgb(10 22 40 / 0.28);
 
   --animate-aurora-slow: aurora-drift 22s ease-in-out infinite alternate;
   --animate-aurora-slower: aurora-drift 26s ease-in-out infinite alternate-reverse;
@@ -70,7 +74,8 @@ body {
 }
 
 ::selection {
-  background: rgb(14 134 212 / 0.2);
+  background: var(--color-brand-sky);
+  color: #fff;
 }
 
 /* ---------- Typography scale ---------- */
@@ -159,7 +164,7 @@ body {
   background-image: linear-gradient(
     to right,
     var(--color-brand-accent-ink),
-    var(--color-brand-accent)
+    var(--color-brand-sky)
   );
 }
 
@@ -192,8 +197,8 @@ body {
   @apply rounded-[28px] p-[1px] shadow-soft;
   background-image: linear-gradient(
     135deg,
-    var(--color-brand-accent),
-    var(--color-brand-accent-2),
+    var(--color-brand-accent-ink),
+    var(--color-brand-sky),
     var(--color-brand-mint)
   );
 }
@@ -273,9 +278,13 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgb(15 30 45 / 0.18);
-  border-radius: 999px;
+  background: var(--color-brand-silver);
+  border-radius: 8px;
   border: 2px solid var(--color-brand-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-accent-ink);
 }
 
 /* ---------- Backdrop-filter graceful fallback ---------- */
