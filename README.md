@@ -87,11 +87,12 @@ tracking, dan warna headline tidak lagi ditulis ulang di tiap komponen.
 | `.eyebrow`       | Label kecil di atas headline                      | 11px, tracking 0.18em   |
 
 - Font: **Outfit** (headline, weight 800, tracking −0.024em s.d. −0.032em) dan **Inter** (teks isi).
-- Warna teks: headline `brand-ink #161C1F`, sub-headline & isi `brand-secondary #4A5760`
+- Warna teks: headline `brand-ink #0B3D5C`, sub-headline & isi `brand-secondary #3E6076`
   (kontras 15.9:1 dan 6.6:1 di atas `brand-bg`, lolos WCAG AA/AAA).
 - Label aksen kecil memakai `brand-accent-ink #0B5C8A` (6.7:1); `brand-accent #0E86D4`
   hanya untuk isian/gradasi karena terlalu terang untuk teks kecil.
-- Halaman `/warna` (`ColorLabPage`) adalah alat bantu memilih warna teks — hapus setelah final.
+- Halaman `/warna` (`ColorLabPage`) adalah color lab: input hex, palet siap pakai, dan color picker
+dari gambar (canvas, diproses lokal). Pilihan tersimpan di `localStorage` — hapus setelah final.
 - `text-wrap: balance` untuk headline dan `pretty` untuk paragraf.
 
 ## Catatan Desain
