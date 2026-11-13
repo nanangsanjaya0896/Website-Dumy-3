@@ -61,7 +61,7 @@ export default function Footer() {
                 <Snowflake className="h-7 w-7 text-brand-accent-2" strokeWidth={2} fill="rgba(56, 189, 248, 0.2)" />
                 <span className="font-display text-xl font-bold tracking-wide">SEJUKIN</span>
               </div>
-              <h2 className="mt-6 max-w-md display-section-sm">
+              <h2 className="mt-6 max-w-md display-section-sm text-white">
                 Udara sejuk, ruangan nyaman — mulai dari{" "}
                 <span className="text-gradient-bright">Sejukin</span>.
               </h2>
