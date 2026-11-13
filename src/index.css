@@ -232,6 +232,38 @@ body {
   opacity: 1;
 }
 
+/* ---------- Brand marquee ---------- */
+
+.brand-marquee {
+  display: flex;
+  width: max-content;
+  animation: brand-marquee 45s linear infinite;
+  will-change: transform;
+}
+
+.brand-marquee-group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+@keyframes brand-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .brand-marquee:hover {
+    animation-play-state: paused;
+  }
+}
+
 /* ---------- Scrollbar ---------- */
 
 ::-webkit-scrollbar {
@@ -265,8 +297,8 @@ body {
     scroll-behavior: auto;
   }
   .aurora-blob,
-  .marquee-track,
   .wa-ping {
     animation: none !important;
   }
+  /* Marquee merek tetap berjalan (dekoratif & bisa di-pause saat hover) */
 }
