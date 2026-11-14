@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Reveal from "../components/Reveal";
 import ContactCTA from "../components/ContactCTA";
+import { BannerBackdrop } from "../components/PageHeader";
 import NotFoundPage from "./NotFoundPage";
 import { formatDate, getArticle, relatedArticles } from "../data/articles";
 import { usePageMeta, SITE_URL } from "../hooks/usePageMeta";
@@ -87,8 +88,9 @@ export default function ArticleDetailPage() {
     <>
       <article>
         {/* Header artikel */}
-        <header className="border-b border-hairline bg-white pt-32 pb-12 md:pt-40 md:pb-16">
-          <div className="mx-auto max-w-3xl px-4 sm:px-6 md:px-8">
+        <header className="relative isolate overflow-hidden pt-32 pb-16 md:pt-40 md:pb-24">
+          <BannerBackdrop />
+          <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 md:px-8">
             <Link
               to="/artikel"
               className="focus-ring inline-flex items-center gap-2 rounded text-xs font-semibold tracking-wide text-brand-accent-ink uppercase transition-colors hover:text-brand-accent"
@@ -103,7 +105,7 @@ export default function ArticleDetailPage() {
             <h1 className="mt-3 display-page">{article.title}</h1>
             <p className="mt-5 lead-lg">{article.excerpt}</p>
 
-            <p className="mt-7 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-semibold text-brand-secondary">
+            <p className="mt-7 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs font-semibold text-brand-secondary">
               <span>Diterbitkan {formatDate(article.date)}</span>
               <span className="text-brand-secondary/40">•</span>
               <span>Diperbarui {formatDate(article.updated)}</span>
