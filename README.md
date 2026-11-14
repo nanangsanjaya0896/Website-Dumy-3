@@ -2,6 +2,16 @@
 
 Website company profile multi-page untuk **Sejukin**, perusahaan jasa AC profesional (pemasangan, perawatan, perbaikan, dan penjualan unit AC) yang melayani area Jabodetabek.
 
+**Live:** <https://sejukin-ac.vercel.app>
+
+> Catatan domain: `sejukin.vercel.app` sudah diklaim akun Vercel lain (subdomain `*.vercel.app`
+> unik global, siapa cepat dia dapat), jadi Vercel menetapkan `sejukin-ac.vercel.app`.
+> Alamat lama `sejukin-psi.vercel.app` tetap aktif sebagai alias dan mengarah ke deployment
+> produksi yang sama. Bila ingin alamat yang persis `sejukin.id`, perlu domain kustom sendiri.
+> URL kanonik dipakai di `index.html` (canonical/OG), `src/hooks/usePageMeta.js`,
+> `scripts/prerender-meta.mjs`, `public/sitemap.xml`, dan `public/robots.txt` — ubah kelimanya
+> bersama kalau domain berubah lagi.
+
 ## Tech Stack
 
 - **Vite** + **React 19** (JSX, functional components, hooks)
@@ -53,7 +63,7 @@ src/
 │                        #  socials, brands, faqs)
 ├── hooks/               # useScrollToTop, useCounter
 ├── layouts/
-│   └── MainLayout.jsx       # Aurora background + Header/Footer/chat AI + WA float
+│   └── MainLayout.jsx       # Latar ARKTIS + Header/Footer/chat AI + WA float
 └── pages/               # HomePage, AboutPage, ProjectsPage,
                          # ProjectDetailPage, ServicesPage, ContactPage,
                          # NotFoundPage
@@ -123,7 +133,7 @@ tracking, dan warna headline tidak lagi ditulis ulang di tiap komponen.
   Catatan: teks putih di atas flame = 3.1:1 (sama seperti referensi ARKTIS) — cukup untuk teks besar,
   di bawah ambang AA untuk teks kecil. Ganti ke `text-brand-ink` bila butuh AA penuh.
 - Kartu memakai glassmorphism (`bg-white/60 backdrop-blur-xl border-hairline`) dan radius `28px`.
-- Aurora background bergerak lambat di luar hero dan otomatis berhenti saat `prefers-reduced-motion` aktif.
+- Latar bagian bergantian `white` ↔ `ice #EEF6FF` mengikuti pola ARKTIS; tanpa kabut/aurora bergerak.
 - Timeline GSAP hero memiliki safety timeout agar konten tidak pernah tertinggal dalam keadaan tersembunyi.
 
 ## SEO, share card & aksesibilitas (Paket A)

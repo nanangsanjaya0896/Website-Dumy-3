@@ -1,7 +1,7 @@
 # Audit "Awwwards-tier" — Sejukin
 
 Metode: pipeline 9 fase dari `Ga14ctic/awwwards-skill` (dipakai sebagai **standar penilaian**, bukan di-install).
-Objek: `sejukin-psi.vercel.app`, commit `f1121dd`, 13 Nov 2026. Basis: kode sumber aktual (`src/`, 3.350 baris).
+Objek: `sejukin-ac.vercel.app` (waktu audit: `sejukin-psi.vercel.app`), commit `f1121dd`, 13 Nov 2026. Basis: kode sumber aktual (`src/`, 3.350 baris).
 
 ---
 
