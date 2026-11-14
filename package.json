@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build && node scripts/prerender-meta.mjs",
     "preview": "vite preview",
-    "build:vite": "vite build"
+    "build:vite": "vite build",
+    "smoke": "node scripts/smoke.mjs",
+    "verify": "npm run build && npm run smoke"
   },
   "dependencies": {
     "clsx": "2.1.1",

@@ -1,6 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { ArrowUpRight, Send, X } from "lucide-react";
+import { company } from "../data/company";
+import { services } from "../data/services";
+import { faqs } from "../data/faqs";
 
 /* Penanda bot: glif robot geometris (SVG garis), bukan ilustrasi hasil AI */
 function RobotMark({ className = "h-4 w-4" }) {
