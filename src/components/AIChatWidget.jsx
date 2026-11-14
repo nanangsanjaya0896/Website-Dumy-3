@@ -1,8 +1,31 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { ArrowUpRight, Send, Snowflake, X } from "lucide-react";
+import { ArrowUpRight, Send, X } from "lucide-react";
 
-/* Penanda bot: monogram tipografis, bukan ilustrasi robot hasil AI */
+/* Penanda bot: glif robot geometris (SVG garis), bukan ilustrasi hasil AI */
+function RobotMark({ className = "h-4 w-4" }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.7}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M12 2.2v3" />
+      <circle cx="12" cy="1.8" r="1" fill="currentColor" stroke="none" />
+      <rect x="3.6" y="5.2" width="16.8" height="12.4" rx="4" />
+      <path d="M3.6 10.4h1.8M18.6 10.4h1.8" />
+      <circle cx="9" cy="10.6" r="1.15" fill="currentColor" stroke="none" />
+      <circle cx="15" cy="10.6" r="1.15" fill="currentColor" stroke="none" />
+      <path d="M9.4 14.4h5.2" />
+    </svg>
+  );
+}
+
 function BotMark({ size = "md" }) {
   const box = size === "lg" ? "h-10 w-10 rounded-2xl" : "h-7 w-7 rounded-full";
   return (
@@ -10,17 +33,10 @@ function BotMark({ size = "md" }) {
       aria-hidden="true"
       className={`${box} grid shrink-0 place-items-center bg-brand-navy text-white`}
     >
-      <Snowflake
-        className={size === "lg" ? "h-5 w-5" : "h-3.5 w-3.5"}
-        strokeWidth={2}
-        fill="rgba(91, 163, 217, 0.25)"
-      />
+      <RobotMark className={size === "lg" ? "h-6 w-6" : "h-4 w-4"} />
     </span>
   );
 }
-import { company } from "../data/company";
-import { services } from "../data/services";
-import { faqs } from "../data/faqs";
 
 const priceList = services
   .map((service) => `• ${service.title} — ${service.priceRange}`)
@@ -404,12 +420,7 @@ export default function AIChatWidget() {
         className="group fixed right-6 bottom-24 z-50"
       >
         <span className="relative grid h-14 w-14 place-items-center rounded-full bg-brand-navy text-white shadow-[0_10px_28px_-6px_rgb(11_37_69/0.55)] ring-2 ring-white/70 transition-shadow group-hover:shadow-[0_14px_34px_-6px_rgb(11_37_69/0.7)]">
-          <Snowflake
-            className="h-6 w-6"
-            strokeWidth={2}
-            fill="rgba(91, 163, 217, 0.25)"
-            aria-label="Sejukin AI"
-          />
+          <RobotMark className="h-7 w-7" />
           <AnimatePresence initial={false}>
             {open && (
               <motion.span

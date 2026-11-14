@@ -9,6 +9,7 @@ const links = [
   { to: "/services", label: "Layanan" },
   { to: "/projects", label: "Proyek" },
   { to: "/services#harga", label: "Harga", hash: true },
+  { to: "/artikel", label: "Artikel" },
   { to: "/contact", label: "Kontak" },
 ];
 

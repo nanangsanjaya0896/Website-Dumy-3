@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { motion } from "motion/react";
 import PageHeader from "../components/PageHeader";
 import Reveal from "../components/Reveal";

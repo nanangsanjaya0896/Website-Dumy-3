@@ -68,6 +68,7 @@ const serviceLinks = [
 const infoLinks = [
   { to: "/about", label: "Tentang Kami" },
   { to: "/projects", label: "Portofolio Proyek" },
+  { to: "/artikel", label: "Artikel & Panduan" },
   { to: "/services#harga", label: "Harga & Paket" },
   { to: "/contact", label: "Cara Booking" },
   { to: "/about", label: "Garansi & SOP Kerja" },

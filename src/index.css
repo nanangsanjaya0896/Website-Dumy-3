@@ -297,3 +297,66 @@ body {
   }
   /* Marquee merek tetap berjalan (dekoratif & bisa di-pause saat hover) */
 }
+
+/* ---------- Isi artikel (tanpa plugin typography) ---------- */
+
+.article-body {
+  color: var(--color-brand-secondary);
+  font-size: 1.0625rem;
+  line-height: 1.78;
+}
+
+.article-body > section + section {
+  margin-top: 2.5rem;
+}
+
+.article-body h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.375rem, 2.2vw, 1.75rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-brand-ink);
+  text-wrap: balance;
+  margin-bottom: 0.875rem;
+}
+
+.article-body h3 {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-brand-ink);
+  margin-bottom: 0.375rem;
+}
+
+.article-body p + p {
+  margin-top: 1rem;
+}
+
+.article-body ul {
+  margin-top: 1.125rem;
+  padding-left: 1.125rem;
+  list-style: none;
+}
+
+.article-body li {
+  position: relative;
+  padding-left: 1rem;
+  margin-top: 0.625rem;
+}
+
+.article-body li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 6px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--color-brand-accent);
+}
+
+.article-faq {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--color-hairline);
+  padding-top: 1.25rem;
+}

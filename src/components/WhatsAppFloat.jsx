@@ -22,28 +22,21 @@ export default function WhatsAppFloat() {
       href={company.whatsappLink}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat via WhatsApp"
-      className="group fixed right-6 bottom-6 z-50"
-      initial={{ opacity: 0, scale: 0.6 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay: 1.6, type: "spring", stiffness: 260, damping: 18 }}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.94 }}
+      aria-label="Chat WhatsApp Sejukin"
+      className="group fixed right-6 bottom-6 z-50 flex items-center gap-3"
+      initial={{ opacity: 0, scale: 0.6, y: 20 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      transition={{ delay: 2.4, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
-      <span
-        className="wa-ping animate-wa-pulse absolute inset-0 rounded-full bg-[#25D366]"
-        aria-hidden="true"
-      />
-      <span
-        className="relative grid h-14 w-14 place-items-center rounded-full text-white shadow-[0_8px_24px_-4px_rgb(37_211_102/0.5)] transition-shadow group-hover:shadow-[0_12px_32px_-4px_rgb(37_211_102/0.65)]"
-        style={{
-          backgroundImage: "linear-gradient(135deg, #25D366, #128C7E)",
-        }}
-      >
-        <WhatsAppIcon size={26} />
+      <span className="pointer-events-none translate-x-2 rounded-full bg-brand-navy px-4 py-2.5 text-[12px] font-bold whitespace-nowrap text-white opacity-0 shadow-lift transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+        Butuh bantuan? Chat kami
       </span>
-      <span className="pointer-events-none absolute top-1/2 right-full mr-3 -translate-y-1/2 translate-x-1 rounded-full bg-brand-primary px-3 py-1.5 text-xs font-semibold whitespace-nowrap text-white opacity-0 shadow-lg transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-        Chat via WhatsApp
+      <span className="relative grid h-14 w-14 place-items-center rounded-full bg-[#25D366] shadow-[0_14px_32px_-8px_rgba(37,211,102,0.55)] transition-transform duration-300 group-hover:scale-105">
+        <span
+          className="absolute inset-0 animate-ping rounded-full bg-[#25D366] opacity-25"
+          aria-hidden="true"
+        />
+        <WhatsAppIcon size={26} className="relative" />
       </span>
     </motion.a>
   );

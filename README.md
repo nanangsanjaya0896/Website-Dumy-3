@@ -142,3 +142,12 @@ tracking, dan warna headline tidak lagi ditulis ulang di tiap komponen.
 - **Ikon dekoratif diganti tipografi.** Kotak ikon gradient di kartu layanan, kartu "alasan memilih", dan daftar nilai kini memakai **nomor** (`01`, `02`, …) dalam Plus Jakarta Sans — bukan ikon Lucide generik. Tanda kutip sitasi memakai glyph `“`, bukan ikon `Quote`.
 - **Ikon fungsional tetap dipertahankan** karena membawa informasi: panah & chevron navigasi, telepon/email/lokasi/jam di footer & halaman kontak, cek di daftar deliverables, QR WhatsApp.
 - Data ikon yang tidak terpakai sudah dibuang dari `src/data/services.js`, `AboutPage`, `ServicesPage`, dan `ProjectsPage`.
+
+## Artikel & SEO
+
+- **Rute**: `/artikel` (daftar) dan `/artikel/:slug` (detail), konten di `src/data/articles.js`.
+- **Meta per halaman**: `src/hooks/usePageMeta.js` mengatur `document.title`, description, canonical, Open Graph, dan JSON-LD saat rute berubah.
+- **Prerender meta**: `scripts/prerender-meta.mjs` berjalan otomatis setelah `vite build` (`npm run build`). Skrip menyalin `dist/index.html` ke folder per rute (`dist/artikel/<slug>/index.html`) dan menimpa title/description/OG/canonical + JSON-LD `Article`, sehingga crawler dan pratinjau share WhatsApp membaca isi yang benar walau aplikasinya SPA. Untuk build tanpa langkah ini: `npm run build:vite`.
+- **Structured data artikel**: `Article` + `BreadcrumbList` + `FAQPage` (bila artikel punya `faq`).
+- **`public/sitemap.xml` + `public/robots.txt`**: daftar semua rute termasuk artikel. **Tambahkan entri baru setiap kali menambah artikel.**
+- **Menambah artikel**: tambah objek di `src/data/articles.js`, lalu tambah `<url>` di `sitemap.xml`; prerender mengikuti otomatis.

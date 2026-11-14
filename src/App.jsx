@@ -11,6 +11,8 @@ const ProjectsPage = lazy(() => import("./pages/ProjectsPage"));
 const ProjectDetailPage = lazy(() => import("./pages/ProjectDetailPage"));
 const ServicesPage = lazy(() => import("./pages/ServicesPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
+const ArticlesPage = lazy(() => import("./pages/ArticlesPage"));
+const ArticleDetailPage = lazy(() => import("./pages/ArticleDetailPage"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
 function RouteLoader() {
@@ -45,6 +47,8 @@ function AnimatedRoutes() {
           <Route path="/projects/:id" element={routed(<ProjectDetailPage />)} />
           <Route path="/services" element={routed(<ServicesPage />)} />
           <Route path="/contact" element={routed(<ContactPage />)} />
+          <Route path="/artikel" element={routed(<ArticlesPage />)} />
+          <Route path="/artikel/:slug" element={routed(<ArticleDetailPage />)} />
           <Route path="*" element={routed(<NotFoundPage />)} />
         </Route>
       </Routes>
