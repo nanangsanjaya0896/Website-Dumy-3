@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sejukin-psi.vercel.app/sitemap.xml
+Sitemap: https://sejukin-ac.vercel.app/sitemap.xml

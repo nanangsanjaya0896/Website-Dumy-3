@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://sejukin-psi.vercel.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://sejukin-psi.vercel.app/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://sejukin-psi.vercel.app/projects</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://sejukin-psi.vercel.app/about</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://sejukin-psi.vercel.app/contact</loc><changefreq>yearly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://sejukin-psi.vercel.app/artikel</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://sejukin-psi.vercel.app/artikel/cara-menghitung-kebutuhan-pk-ac</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
-  <url><loc>https://sejukin-psi.vercel.app/artikel/biaya-cuci-ac-jakarta</loc><lastmod>2026-09-21</lastmod><priority>0.7</priority></url>
-  <url><loc>https://sejukin-psi.vercel.app/artikel/freon-r32-vs-r410a</loc><lastmod>2026-08-30</lastmod><priority>0.7</priority></url>
-  <url><loc>https://sejukin-psi.vercel.app/artikel/tanda-ac-butuh-servis</loc><lastmod>2026-10-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://sejukin-ac.vercel.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://sejukin-ac.vercel.app/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://sejukin-ac.vercel.app/projects</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sejukin-ac.vercel.app/about</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sejukin-ac.vercel.app/contact</loc><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sejukin-ac.vercel.app/artikel</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sejukin-ac.vercel.app/artikel/cara-menghitung-kebutuhan-pk-ac</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://sejukin-ac.vercel.app/artikel/biaya-cuci-ac-jakarta</loc><lastmod>2026-09-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://sejukin-ac.vercel.app/artikel/freon-r32-vs-r410a</loc><lastmod>2026-08-30</lastmod><priority>0.7</priority></url>
+  <url><loc>https://sejukin-ac.vercel.app/artikel/tanda-ac-butuh-servis</loc><lastmod>2026-10-15</lastmod><priority>0.7</priority></url>
 </urlset>

@@ -128,7 +128,7 @@ tracking, dan warna headline tidak lagi ditulis ulang di tiap komponen.
 
 ## SEO, share card & aksesibilitas (Paket A)
 
-- **OG / Twitter card**: `public/og-image.png` (1200×630, navy + aksen cyan) dipakai untuk preview saat link dibagikan di WhatsApp/Facebook/X. URL absolut di `index.html` mengarah ke `sejukin-psi.vercel.app` — kalau domain berubah, perbarui `og:url`, `og:image`, `twitter:image`, dan `canonical`.
+- **OG / Twitter card**: `public/og-image.png` (1200×630, navy + aksen cyan) dipakai untuk preview saat link dibagikan di WhatsApp/Facebook/X. URL absolut di `index.html` mengarah ke `sejukin-ac.vercel.app` — kalau domain berubah, perbarui `og:url`, `og:image`, `twitter:image`, dan `canonical`.
 - **Structured data**: blok `HVACBusiness` JSON-LD di `index.html` (nama, telepon, email, area layanan, jam buka). Duplikat dari `src/data/company.js` — ubah keduanya saat data perusahaan berubah.
 - **Skip link**: "Lewati ke konten utama" di `MainLayout.jsx`, target `<main id="main">`.
 - **Gambar**: semua gambar pihak ketiga memakai `width`/`height` eksplisit + `srcSet` via `src/lib/img.js` (`buildSrcSet`, `withWidth`) untuk mencegah CLS.

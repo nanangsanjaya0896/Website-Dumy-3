@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const SITE_URL = "https://sejukin-psi.vercel.app";
+const SITE_URL = "https://sejukin-ac.vercel.app";
 
 function setMeta(attr, key, content) {
   if (!content) return;

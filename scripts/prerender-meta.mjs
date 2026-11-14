@@ -18,7 +18,7 @@ import { fileURLToPath } from "node:url";
 
 import { articles } from "../src/data/articles.js";
 
-const SITE_URL = "https://sejukin-psi.vercel.app";
+const SITE_URL = "https://sejukin-ac.vercel.app";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const dist = join(root, "dist");
 
