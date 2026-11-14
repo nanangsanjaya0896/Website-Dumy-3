@@ -8,6 +8,10 @@ import FAQAccordion from "../components/FAQAccordion";
 import BrandLogos from "../components/BrandLogos";
 import ContactCTA from "../components/ContactCTA";
 import { services } from "../data/services";
+import { buildSrcSet } from "../lib/img";
+
+const servicesPhoto =
+  "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1600&auto=format&fit=crop";
 
 const processSteps = [
   {
@@ -101,7 +105,36 @@ export default function ServicesPage() {
               Apa pun kebutuhan AC Anda, kami punya timnya.
             </h2>
           </Reveal>
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+          <Reveal delay={0.08} className="mx-auto mt-10 max-w-5xl md:mt-12">
+            <figure className="group relative overflow-hidden rounded-[28px] border border-brand-silver/60 shadow-soft">
+              <img
+                src={servicesPhoto}
+                srcSet={buildSrcSet(servicesPhoto, [640, 960, 1280, 1600])}
+                sizes="(min-width: 1080px) 60rem, 100vw"
+                width={1600}
+                height={900}
+                loading="lazy"
+                decoding="async"
+                alt="Teknisi Sejukin memasang dan mengatur unit AC split di dinding"
+                className="h-[220px] w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03] sm:h-[300px] md:h-[400px]"
+              />
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-arctic/70 via-brand-arctic/10 to-transparent"
+              />
+              <figcaption className="absolute inset-x-4 bottom-4 flex flex-wrap items-center gap-2.5 sm:inset-x-6 sm:bottom-6">
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/90 px-3.5 py-1.5 text-[11px] font-bold tracking-[0.14em] text-brand-ink uppercase backdrop-blur-sm">
+                  Tim bersertifikat
+                </span>
+                <span className="rounded-full bg-white/20 px-3.5 py-1.5 text-xs font-semibold text-white backdrop-blur-sm">
+                  Pemasangan, servis, perbaikan, isi freon
+                </span>
+              </figcaption>
+            </figure>
+          </Reveal>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <Reveal key={service.number} delay={index * 0.06}>
                 <motion.div
