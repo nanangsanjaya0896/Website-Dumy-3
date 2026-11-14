@@ -1,7 +1,5 @@
 import { useMemo, useState } from "react";
-import { Link } from "react-router";
 import { AnimatePresence, motion } from "motion/react";
-import { ArrowRight } from "lucide-react";
 import PageHeader from "../components/PageHeader";
 import Reveal from "../components/Reveal";
 import ProjectStack from "../components/ProjectStack";
@@ -77,19 +75,6 @@ function FeaturedStack() {
                       </p>
                     </div>
                   </div>
-                  <motion.div
-                    whileHover={{ y: -2 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="mt-7"
-                  >
-                    <Link
-                      to={`/projects/${active.id}`}
-                      className="focus-ring bg-primary-gradient flex w-full items-center justify-center gap-2 rounded-full py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-accent/25 transition-shadow hover:shadow-xl hover:shadow-brand-accent/30"
-                    >
-                      Lihat Detail Proyek
-                      <ArrowRight size={16} />
-                    </Link>
-                  </motion.div>
                 </motion.div>
               </AnimatePresence>
             </div>
