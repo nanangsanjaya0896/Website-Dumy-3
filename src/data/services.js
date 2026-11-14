@@ -1,6 +1,9 @@
 export const services = [
   {
     number: "01",
+    image: "/images/services/pemasangan.jpg",
+    imageAlt:
+      "Teknisi Sejukin memasang unit AC split di dinding ruang tamu",
     title: "Pemasangan AC Baru",
     description:
       "Pemasangan AC split, cassette, standing, hingga VRF untuk rumah, kantor, dan bangunan komersial — lengkap dengan perhitungan kebutuhan PK yang presisi.",
@@ -16,6 +19,9 @@ export const services = [
   },
   {
     number: "02",
+    image: "/images/services/servis.jpg",
+    imageAlt:
+      "Unit AC split terbuka saat dicuci dan dibersihkan menyeluruh",
     title: "Servis & Perawatan Rutin",
     description:
       "Cuci AC menyeluruh agar udara tetap bersih, dingin maksimal, dan konsumsi listrik lebih hemat setiap bulannya.",
@@ -31,6 +37,9 @@ export const services = [
   },
   {
     number: "03",
+    image: "/images/services/perbaikan.jpg",
+    imageAlt:
+      "Peralatan servis AC: multimeter, selang, dan cairan pembersih",
     title: "Perbaikan & Troubleshooting",
     description:
       "Diagnosis akurat untuk semua keluhan: AC kurang dingin, menetes, berisik, mati total, hingga error pada modul PCB.",
@@ -46,6 +55,9 @@ export const services = [
   },
   {
     number: "04",
+    image: "/images/services/freon.jpg",
+    imageAlt:
+      "Manifold gauge dan selang untuk mengisi freon AC",
     title: "Isi Ulang Freon",
     description:
       "Pengisian freon R32, R410A, dan R22 dengan takaran presisi sesuai spesifikasi nameplate pabrikan — bukan asal isi.",
@@ -61,6 +73,9 @@ export const services = [
   },
   {
     number: "05",
+    image: "/images/services/bongkar-pasang.jpg",
+    imageAlt:
+      "Unit AC split yang siap dibongkar dan dipindahkan",
     title: "Bongkar Pasang AC (Relocate)",
     description:
       "Pindah AC antar ruangan atau antar gedung dengan aman — tanpa risiko kebocoran freon maupun kerusakan unit.",
@@ -76,6 +91,9 @@ export const services = [
   },
   {
     number: "06",
+    image: "/images/services/kontrak.jpg",
+    imageAlt:
+      "Keluarga menikmati ruangan sejuk dengan AC terpasang di rumah",
     title: "Kontrak Perawatan Berkala",
     description:
       "Program perawatan terjadwal untuk kantor, hotel, klinik, dan gedung komersial dengan laporan kondisi unit digital.",
