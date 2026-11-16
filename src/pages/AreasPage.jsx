@@ -7,6 +7,12 @@ import { company } from "../data/company";
 import { areas, areaSummary, visitSteps } from "../data/areas";
 import { usePageMeta, SITE_URL } from "../hooks/usePageMeta";
 
+/** Nomor WhatsApp dari data perusahaan, dengan pesan yang menyebut wilayah. */
+const waLink = (areaName) =>
+  `https://wa.me/${company.phoneHref.replace(/\D/g, "")}?text=${encodeURIComponent(
+    `Halo Sejukin, saya di ${areaName} ingin booking layanan AC.`,
+  )}`;
+
 export default function AreasPage() {
   usePageMeta({
     title: "Area Kerja — Layanan AC Jabodetabek",
@@ -91,7 +97,7 @@ export default function AreasPage() {
                     ))}
                   </ul>
                   <a
-                    href={company.whatsappLink}
+                    href={waLink(area.name)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="focus-ring mt-6 inline-flex items-center gap-2 border-t border-hairline pt-4 text-xs font-semibold text-brand-accent-ink transition-colors hover:text-brand-accent"
