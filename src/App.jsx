@@ -12,6 +12,7 @@ const ProjectDetailPage = lazy(() => import("./pages/ProjectDetailPage"));
 const ServicesPage = lazy(() => import("./pages/ServicesPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const ArticlesPage = lazy(() => import("./pages/ArticlesPage"));
+const AreasPage = lazy(() => import("./pages/AreasPage"));
 const ArticleDetailPage = lazy(() => import("./pages/ArticleDetailPage"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
@@ -46,6 +47,7 @@ function AnimatedRoutes() {
           <Route path="/projects" element={routed(<ProjectsPage />)} />
           <Route path="/projects/:id" element={routed(<ProjectDetailPage />)} />
           <Route path="/services" element={routed(<ServicesPage />)} />
+          <Route path="/area" element={routed(<AreasPage />)} />
           <Route path="/contact" element={routed(<ContactPage />)} />
           <Route path="/artikel" element={routed(<ArticlesPage />)} />
           <Route path="/artikel/:slug" element={routed(<ArticleDetailPage />)} />

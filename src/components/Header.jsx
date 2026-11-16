@@ -8,6 +8,7 @@ const links = [
   { to: "/about", label: "Tentang" },
   { to: "/services", label: "Layanan" },
   { to: "/projects", label: "Proyek" },
+  { to: "/area", label: "Area" },
   { to: "/services#harga", label: "Harga", hash: true },
   { to: "/artikel", label: "Artikel" },
   { to: "/contact", label: "Kontak" },

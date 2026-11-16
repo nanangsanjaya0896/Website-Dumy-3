@@ -42,6 +42,12 @@ const staticPages = [
       "Dokumentasi proyek pemasangan AC residensial, perkantoran, ruko, dan gudang di Jabodetabek.",
   },
   {
+    path: "area",
+    title: "Area Kerja — Layanan AC Jabodetabek — Sejukin",
+    description:
+      "Jangkauan layanan Sejukin di Jabodetabek: Jakarta, Bogor, Depok, Tangerang, Tangerang Selatan, dan Bekasi. Booking teknisi AC untuk wilayah Anda.",
+  },
+  {
     path: "contact",
     title: "Kontak & Booking Servis AC — Sejukin",
     description:
